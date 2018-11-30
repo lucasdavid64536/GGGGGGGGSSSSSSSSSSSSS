@@ -36,9 +36,7 @@ client.on('message', msg => {
       msg.delete();
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
-	if (command === 'test') {
-		msg.channel.send('im ready')
-	}
+	
 });
 client.login(process.env.token);
 
