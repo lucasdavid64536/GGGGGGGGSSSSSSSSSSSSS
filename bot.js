@@ -37,5 +37,5 @@ client.on('message', msg => {
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
 });
-bot.login(process.env.token);
+client.login(token);
 
