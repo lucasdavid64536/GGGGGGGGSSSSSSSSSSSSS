@@ -4,12 +4,12 @@ require('./util/cmdloader.js')(client);//requires the command loader
 let prefix = process.env.token;
 let token = ".";
 
-client.on('ready', () => {
-client.user.setActivity(`${client.guilds.size} SERVERS TYPE .HELP`, {type: 'WATCHING'});
+bot.on('ready', () => {
+bot.user.setActivity(`${client.guilds.size} SERVERS TYPE .HELP`, {type: 'WATCHING'});
 console.log('IM READY !')
 });
 
-client.on('message', message => {
+bot.on('message', message => {
  if (message.author.bot) return;
  if (!message.content.startsWith(prefix)) return;
 
@@ -19,23 +19,23 @@ client.on('message', message => {
 
   
 //command handler
-let commandfile = client.commands.get(cmd);
-  let alias = client.aliases.get(cmd);
+let commandfile = bot.commands.get(cmd);
+  let alias = bot.aliases.get(cmd);
 
   if(commandfile){
-	  commandfile.run(client,message,args);
+	  commandfile.run(bot,message,args);
   }
   if(alias){
-	  alias.run(client,message,args);
+	  alias.run(bot,message,args);
   }
 //end of handler
 });
-client.on('message', msg => {
+bot.on('message', msg => {
   const swearWords = ["WTF", "bitch","fuck","FUCK","wtf","Fuck","fUck","fUCk","wtf","w t f","wt f","motherfucker","MOTHERFUCKERS","MOTHERFUCKER","MOTHERfUCKER","mOTHERfucker"];
   if( swearWords.some(word => msg.content.includes(word)) ) {
       msg.delete();
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
 });
-client.login(token);
+bot.login(process.env.token);
 
