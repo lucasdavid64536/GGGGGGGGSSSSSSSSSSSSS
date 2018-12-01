@@ -48,7 +48,7 @@ if(cmd === ('ban'||'BAN')){
   .addField("***BAN***","**Help With Ban Command : ban + @user** ``OR`` **b + @user** ", true)
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
+  message.channel.sendEmbed(embed);
   msg.react('ðŸ‘');
 }
 if(cmd === 'kick'){
