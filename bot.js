@@ -36,6 +36,11 @@ client.on('message', msg => {
       msg.delete();
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
+client.on('message', msg => {
+  const swearWords = ["yt", "youtube",".help",".h",".avatar",".ban",".kick",".serverinfo",".info",".8ball",".game",".invite",".count",".ping",".p",".prefix",".support"];
+  if( swearWords.some(word => msg.content.includes(word)) ) {
+      msg.author.send('``Do You Like My Commands ? Do You Like Me ??`` 🍂 **Follow My Owner In Hes Youtube Channel & Learn How To Make An Awesome Discord Bot Like Me Dont Forget To Subscribe To Him And Watch All Hes Videos**');
+    }	
 	
 });
 client.login(process.env.token);
