@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Banned By", `<@${message.author.id}> with ID ${message.author.id}`)
     .addField("Banned In", message.channel)
     .addField("Time", message.createdAt)
-    .addField("Reason", bReason);
+    .addField("Reason", banReason);
 
     let logchannel = message.guild.channels.find(`name`, "log");
     if(!logchannel) return message.channel.send("**Can't find log channel. Please Create A New Channel With log Name To Be Able To Use This Command**");
