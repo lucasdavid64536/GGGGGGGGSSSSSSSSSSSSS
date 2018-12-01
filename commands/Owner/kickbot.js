@@ -14,10 +14,6 @@ exports.run = (client, message) => {
         .setColor(0xff0000)
 
 
-    if (isNaN(args[0])) return message.channel.send(error17).then(msg => {
-        msg.delete(9000)
-    });
-
     client.guilds.get(args[0]).leave();
     message.channel.send(`**Bot was been removed from server id [${args[0]}]**`)
 	
