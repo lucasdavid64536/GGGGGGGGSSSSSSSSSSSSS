@@ -1,6 +1,6 @@
 let Discord = require('discord.js');
 
-exports.run = (client, message) => {
+exports.run = (bot, message) => {
 	
 	const ownerID = '404950596043669545';
     if (message.author.id !== ownerID) return message.channel.send("You are not authorized to use this command.");
@@ -14,7 +14,7 @@ exports.run = (client, message) => {
         .setColor(0xff0000)
 
 
-    client.guilds.get(args[0]).leave();
+    bot.guilds.get(args[0]).leave();
     message.channel.send(`**Bot was been removed from server id [${args[0]}]**`)
 	
 }
