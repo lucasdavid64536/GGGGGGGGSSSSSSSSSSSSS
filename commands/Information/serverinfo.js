@@ -9,6 +9,7 @@ exports.run = (client, message) => {
   .addField("Owner", message.guild.owner)
   .addField("Owner Id", message.guild.ownerID)
   .addField("Roles", message.guild.roles.size)
+  .addField("Total Members", message.guild.memberCount)
   .addField("Region", message.guild.region)
 .setThumbnail(message.guild.iconURL)
 message.channel.send(embed)
