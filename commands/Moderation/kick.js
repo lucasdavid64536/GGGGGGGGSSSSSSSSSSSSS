@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
     if(!kickChannel) return message.channel.send("Can't find incidents channel.");
 
     message.guild.member(kUser).kick(kReason);
-    kickChannel.send(kickEmbed);
+    kickChannel.send(Embed);
 }
 
 module.exports.help = {
