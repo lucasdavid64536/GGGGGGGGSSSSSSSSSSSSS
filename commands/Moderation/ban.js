@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
     if(!logchannel) return message.channel.send("**Can't find log channel. Please Create A New Channel With log Name To Be Able To Use This Command**");
 
     message.guild.member(bUser).ban(bReason);
-    incidentchannel.send(Embed);
+    logchannel.send(Embed);
 }
 
 module.exports.help = {
