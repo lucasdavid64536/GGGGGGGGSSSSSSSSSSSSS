@@ -21,12 +21,13 @@ module.exports.run = async (bot, message, args) => {
     .addField("Time", message.createdAt)
     .addField("Reason", kReason);
 
-    let kickChannel = message.guild.channels.find(`name`, "log");
+ let kickChannel = message.guild.channels.find(`name`, "log");
     if(!kickChannel) return message.channel.send("**Can't find log channel. Please Create A New Channel With log Name To Be Able To Use This Command**");
 
     message.guild.member(kUser).kick(kReason);
     kickChannel.send(kickEmbed);
 }
+
 
 module.exports.help = {
   name:"kick"
