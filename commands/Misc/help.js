@@ -123,6 +123,7 @@ if(cmd === 'addrole'){
   message.react('ðŸ‘');
 }	
 }
+else if (bot.aliases.has(cmd))
 module.exports.help = {
 	name: "help",
 	alias: ["h",
