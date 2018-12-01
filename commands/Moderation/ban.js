@@ -21,8 +21,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("Time", message.createdAt)
     .addField("Reason", bReason);
 
-    let logchannel = message.guild.channels.find(`name`, "log");
-    if(!logchannel) return message.channel.send("**Can't find log channel. Please Create A New Channel With log Name To Be Able To Use This Command**");
+    let incidentchannel = message.guild.channels.find(`name`, "log");
+    if(!incidentchannel) return message.channel.send("**Can't find log channel. Please Create A New Channel With log Name To Be Able To Use This Command**");
 
     message.guild.member(bUser).ban(bReason);
     logchannel.send(Embed);
