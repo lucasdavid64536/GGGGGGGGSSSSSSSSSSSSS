@@ -62,7 +62,7 @@ exports.run = (client, message) => {
 				}
 			});
     }
-});
+
 
 module.exports.help = {
 	name: "8ball",
