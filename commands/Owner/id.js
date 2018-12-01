@@ -2,7 +2,7 @@ let Discord = require('discord.js');
 
 exports.run = (client, message) => {
 	
-  msg.channel.send(`${msg.guild.id}`)
+  message.channel.send(`${message.guild.id}`)
   
 }
 
