@@ -9,9 +9,9 @@ exports.run = (bot, message, args) => {
         .setDescription('**Please enter a valid server ID.**')
         .setColor('RANDOM')
 
-    var error18 = new Discord.RichEmbed().setColor("990033")
+    var error18 = new Discord.RichEmbed()
         .setDescription('**You cannot kick the bot from this server!**')
-        .setColor(0xff0000)
+        .setColor("RANDOM")
 
 
     bot.guilds.get(args[0]).leave();
