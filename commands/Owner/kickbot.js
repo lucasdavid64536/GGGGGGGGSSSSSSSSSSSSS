@@ -1,6 +1,6 @@
 let Discord = require('discord.js');
 
-exports.run = (bot, message) => {
+exports.run = (bot, message, args) => {
 	
 	const ownerID = '404950596043669545';
     if (message.author.id !== ownerID) return message.channel.send("You are not authorized to use this command.");
