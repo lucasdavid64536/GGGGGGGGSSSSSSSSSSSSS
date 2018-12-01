@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You Can't Use This Command Kiddo! Because Your Missing Administrator Permission");
+    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("**You Can't Use This Command Kiddo! Because Your Missing Administrator Permission**");
     if(args[0] == "help"){
       message.reply("Usage: !ban <user> <reason>");
       return;
