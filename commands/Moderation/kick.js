@@ -2,15 +2,15 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!");
+    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("No can do pal!");
     if(args[0] == "help"){
       message.reply("Usage: .kick <user> <reason>");
       return;
     }
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!kUser) return message.channel.send("I Can't Find This User ! / Mention The User To Be Able To Use This Command");
+    if(!kUser) return message.channel.send("**I Can't Find This User ! Mention The User To Be Able To Use This Command**");
     let kReason = args.slice(1).join(" ") || "None";
-    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("**This User Cant Be Kicked Because He Had A Role Highler Than You** ``OR`` **He Is The Owner Of This Server** ``OR`` **He Have Manage Messages Permission**");
+    if(kUser.hasPermission("ADMINISTRATOR")) return message.channel.send("**This User Cant Be Kicked Because He Had A Role Highler Than You** ``OR`` **He Is The Owner Of This Server** ``OR`` **He Have Manage ADMINISTRATOR Permission**");
 
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("~Kick~")
@@ -21,11 +21,11 @@ module.exports.run = async (bot, message, args) => {
     .addField("Time", message.createdAt)
     .addField("Reason", kReason);
 
-    let kickChannel = message.guild.channels.find(`name`, "incidents");
-    if(!kickChannel) return message.channel.send("Can't find incidents channel.");
+    let kickChannel = message.guild.channels.find(`name`, "audit-log");
+    if(!kickChannel) return message.channel.send("**Can't find audit-log channel. Please Create A New Channel With audit-log Name To Be Able To Use This Command**");
 
     message.guild.member(kUser).kick(kReason);
-    kickChannel.send(Embed);
+    kickChannel.send(kickEmbed);
 }
 
 module.exports.help = {
