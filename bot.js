@@ -33,7 +33,7 @@ let commandfile = client.commands.get(cmd);
 client.on('message', msg => {
   const swearWords = ["WTF", "bitch","fuck","FUCK","wtf","Fuck","fUck","fUCk","wtf","w t f","wt f","motherfucker","MOTHERFUCKERS","MOTHERFUCKER","MOTHERfUCKER","mOTHERfucker"];
   if( swearWords.some(word => msg.content.includes(word)) ) {
-      msg.delete();
+      message.delete();
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
 
