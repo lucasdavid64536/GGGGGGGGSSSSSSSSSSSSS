@@ -8,7 +8,7 @@ exports.run = (client, message) => {
   .setAuthor(`${user.username}`)
   .setImage(user.displayAvatarURL)
   .setColor('RANDOM')
-  message.react('ðŸ‘');
+  message.react('ðŸ‘')
 
   message.channel.send(embed)
 	
