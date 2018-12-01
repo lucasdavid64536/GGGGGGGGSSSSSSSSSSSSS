@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Bot Name", bot.user.username)
     .addField("Created On", bot.user.createdAt);
 
-    message.channel.send(embed);
+    message.channel.send(botembed);
 }
 
 module.exports.help = {
