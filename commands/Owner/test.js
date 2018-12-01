@@ -5,7 +5,7 @@ exports.run = (client, message) => {
   let embed = new Discord.RichEmbed()
   .setTimestamp()
   .setTitle("Direct Message To You")
-  .addField(`Sent By:`,`<@${msg.author.id}>`)
+  .addField(`Sent By:`,`<@${message.author.id}>`)
   .setColor("RANDOM")
   .setThumbnail(msg.author.displayAvatarURL)
   .addField(`Message: `,msg.content)
