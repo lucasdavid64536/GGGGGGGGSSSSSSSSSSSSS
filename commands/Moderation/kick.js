@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Kicked By", `<@${message.author.id}> with ID ${message.author.id}`)
     .addField("Kicked In", message.channel)
     .addField("Time", message.createdAt)
-    .addField("Reason", kReason);
+    .addField("Reason", kickReason);
 
     let kickChannel = message.guild.channels.find(`name`, "log");
     if(!kickChannel) return message.channel.send("**Can't find log channel. Please Create A New Channel With log Name To Be Able To Use This Command**");
