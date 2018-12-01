@@ -4,13 +4,13 @@ module.exports.run = async (bot, message, args) => {
 
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!");
     if(args[0] == "help"){
-      message.reply("Usage: !kick <user> <reason>");
+      message.reply("Usage: .kick <user> <reason>");
       return;
     }
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!kUser) return message.channel.send("Can't find user!");
-    let kReason = args.join(" ").slice(22);
-    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
+    if(!kUser) return message.channel.send("I Can't Find This User ! / Mention The User To Be Able To Use This Command");
+    let kReason = args.slice(1).join(" ") || "None";
+    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("**This User Cant Be Kicked Because He Had A Role Highler Than You** ``OR`` **He Is The Owner Of This Server** ``OR`` **He Have Manage Messages Permission**");
 
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("~Kick~")
