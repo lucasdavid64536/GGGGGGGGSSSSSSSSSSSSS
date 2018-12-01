@@ -14,7 +14,7 @@ exports.run = (bot, message) => {
         .setColor(0xff0000)
 
 
-    bot.guilds.get(args[0]).leave();
+    bot.guilds.get(Args[0]).leave();
     message.channel.send(`**Bot was been removed from server id [${args[0]}]**`)
 	
 }
