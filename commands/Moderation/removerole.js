@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("**You Can't Use This Command Kiddo! Because Your Missing Administrator Permission**");
+  if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("**You Can't Use This Command Kiddo! Because Your Missing Administrator Permission**");
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
   if(!rMember) return message.reply("**I Can't Find This User ! Mention The User To Be Able To Use This Command**");
   let role = args.join(" ").slice(22);
@@ -13,9 +13,9 @@ module.exports.run = async (bot, message, args) => {
   await(rMember.removeRole(gRole.id));
 
   try{
-    await rMember.send(`RIP, you lost the ${gRole.name} role.`)
+    await rMember.send(`**Noooooo, you lost the** ${gRole.name} **role. Rip... Work Hard...Maybe You Will Get It Back**`)
   }catch(e){
-    message.channel.send(`RIP to <@${rMember.id}>, We removed ${gRole.name} from them. We tried to DM them, but their DMs are locked.`)
+    message.channel.send(`**RIP to** <@${rMember.id}>**,removed** ${gRole.name} **from Him. i Sent Him A Full Report**`)
   }
 }
 
