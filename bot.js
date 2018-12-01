@@ -36,5 +36,8 @@ client.on('message', msg => {
       msg.delete()
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
+	client.on('serverNewMember', function(server, user) {
+	client.sendMessage(server, "A new member has arrived. Welcome, " + user.username + " to " + server.name + ". Type !help for commands.");
+});
 });
 client.login(process.env.token);
