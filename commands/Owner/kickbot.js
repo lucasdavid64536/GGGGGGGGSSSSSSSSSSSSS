@@ -20,5 +20,5 @@ exports.run = (bot, message, args) => {
 }
 module.exports.help = {
 	name: "kickbot",
-	alias: "KICKBOT"
+	alias: "k"
 }
