@@ -11,7 +11,7 @@ client.user.setActivity(`${client.guilds.size} SERVERS TYPE .HELP`, {type: 'WATC
   var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
 
   client.user.setGame(oyun[random], "https://www.twitch.tv/");
-  }, 50000);
+  }, 10000);
 console.log('IM READY !')
 });
 
