@@ -17,6 +17,6 @@ message.react('ðŸ‘');
 	
 }
 module.exports.help = {
-	name: "serverfo",
+	name: "serverinfo",
 	alias: "SERVERINFO"
 }
