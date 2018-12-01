@@ -6,10 +6,6 @@ let prefix = ".";
 
 client.on('ready', () => {
 client.user.setActivity(`${client.guilds.size} SERVERS TYPE .HELP`, {type: 'WATCHING'});
-	setInterval(function() {
-
-  client.user.setGame(oyun[random], "https://www.twitch.tv/");
-  }, 10000);
 console.log('IM READY !')
 });
 
