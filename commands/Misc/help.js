@@ -49,7 +49,7 @@ if(cmd === ('ban'||'BAN')){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  msg.react('ðŸ‘');
+  message.react('ðŸ‘');
 }
 if(cmd === 'kick'){
   var embed = new Discord.RichEmbed()
@@ -58,8 +58,8 @@ if(cmd === 'kick'){
   .addField("**kick**","**Help With Kick Command : kick + @user*** ``OR`` **k + @user** ", true)
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('ðŸ‘');
+  message.channel.sendEmbed(embed);
+  message.react('ðŸ‘');
 }
 if(cmd === 'slap'){
   var embed = new Discord.RichEmbed()
@@ -68,8 +68,8 @@ if(cmd === 'slap'){
   .addField("**Slap**","**Help With Slap Command : Slap + @user*** ``OR`` **s + @user** ", true)
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('ðŸ‘');
+  message.channel.sendEmbed(embed);
+  message.react('ðŸ‘');
 }
 if(cmd === 'clap'){
   var embed = new Discord.RichEmbed()
@@ -78,8 +78,8 @@ if(cmd === 'clap'){
   .addField("**clap**","**Help With clap Command : clap + @user*** ``OR`` **c + @user** ", true)
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('ðŸ‘');
+  message.channel.sendEmbed(embed);
+  message.react('ðŸ‘');
 }
 if(cmd === 'heat'){
   var embed = new Discord.RichEmbed()
@@ -88,8 +88,8 @@ if(cmd === 'heat'){
   .addField("**heat**","**Help With Heat Command : heat + @user*** ``OR`` **h + @user** ", true)
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('ðŸ‘');
+  message.channel.sendEmbed(embed);
+  message.react('ðŸ‘');
 }
 if(cmd === 'cook'){
   var embed = new Discord.RichEmbed()
@@ -99,7 +99,7 @@ if(cmd === 'cook'){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  msg.react('ðŸ‘');
+  message.react('ðŸ‘');
 }
 if(cmd === 'ping'){
   var embed = new Discord.RichEmbed()
@@ -108,8 +108,8 @@ if(cmd === 'ping'){
   .addField("**ping**","**Help With ping Command : ping*** ``OR`` **p** ", true)
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('ðŸ‘');
+  message.channel.sendEmbed(embed);
+  message.react('ðŸ‘');
 }
 	
 }
