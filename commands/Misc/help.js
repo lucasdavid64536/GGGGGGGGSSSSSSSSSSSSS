@@ -115,5 +115,5 @@ if(cmd === 'ping'){
 }
 module.exports.help = {
 	name: "help",
-	alias: ["h", "Help", "HeLP", "HElp", "heLP", "HELP"];
+	alias: ["h", "Help", "HeLP", "HElp", "heLP", "HELP"]
 }
