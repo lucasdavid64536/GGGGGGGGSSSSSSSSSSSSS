@@ -98,7 +98,7 @@ if(cmd === 'cook'){
   .addField("**cook**","**Help With cook Command : cook + @user*** ``OR`` **C + @user** ", true)
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
+  message.channel.sendEmbed(embed);
   msg.react('ðŸ‘');
 }
 if(cmd === 'ping'){
