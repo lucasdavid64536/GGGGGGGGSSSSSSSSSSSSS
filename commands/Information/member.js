@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-exports.run = (client, message, args, tools) => {
+exports.run = (bot, message, args, tools) => {
 
 	const embed = new Discord.MessageEmbed()
 		.setAuthor(message.guild.name, message.guild.iconURL())
