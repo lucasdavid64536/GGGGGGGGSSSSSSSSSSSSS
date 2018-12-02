@@ -23,6 +23,7 @@ module.exports.run = async (bot, message, args) => {
   }catch(e){
     console.log(e.stack);
     message.channel.send(`**Congratulation to** ``<@${rMember.id}>``, **He Got A New Special Role**  ``${gRole.name}``**. I Sent Him A Full Congrat Letter**`)
+    message.react('✅')
   }
 }
 
