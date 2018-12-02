@@ -5,9 +5,9 @@ exports.run = (client, message) => {
   let embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .setTitle('**Total Bans**')
-  .addField("**Total Members Who They Got Bans In This Server Are**", .fetchBans())
+  .addField("**Total Members Who They Got Bans In This Server Are**", fetchBans())
 message.channel.send(embed)
-message.react('ðŸ‘');
+message.react('😂');
 	
 }
 module.exports.help = {
