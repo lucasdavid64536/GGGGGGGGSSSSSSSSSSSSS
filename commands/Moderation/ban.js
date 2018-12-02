@@ -26,6 +26,7 @@ let incidentchannel = message.guild.channels.find(`name`, "log");
 
     message.guild.member(bUser).ban(bReason);
     incidentchannel.send(banEmbed);
+    message.react('⚒')
 }
 
 module.exports.help = {
