@@ -22,9 +22,9 @@ module.exports.run = async (bot, message, args) => {
 
 let incidentchannel = message.guild.channels.find(`name`, "log");
     if(!incidentchannel) return message.channel.send("**Can't find log channel. Please Create A New Channel With log Name To Be Able To Use This Command**");
-    message.react('❌');
     message.guild.member(bUser).ban(bReason);
     incidentchannel.send(banEmbed);
+     message.react('⚒');
 }
 
 module.exports.help = {
