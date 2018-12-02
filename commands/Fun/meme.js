@@ -12,5 +12,5 @@ let nickname = args.join(' ')
   })
   }
   module.exports.help = {
-	name: "set server",
+	name: "setserver",
 }
