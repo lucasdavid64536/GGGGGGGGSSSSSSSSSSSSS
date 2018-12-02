@@ -6,13 +6,13 @@ module.exports.run = async (bot, message, args) => {
     if(args[0] == "help"){
       message.reply("Usage: !ban <user> <reason>");
       return;
-        message.react('❓');
     }
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if(member.HighestRole.position >= msg.member.HighestRole.position){
+    } return msg.reply('**YOU CANNOT USE THIS COMMAND Because the member you want to ban had a role highest than you**')
     if(!bUser) return message.channel.send("**I Can't Find This User ! Mention The User To Be Able To Use This Command**");
     let bReason = args.slice(1).join(" ") || "None";
     if(bUser.hasPermission("ADMINISTRATOR")) return message.channel.send("**This User Cant Be Kicked Because He Had A Role Highler Than You** ``OR`` **He Is The Owner Of This Server** ``OR`` **He Have Manage ADMINISTRATOR Permission**");
-    message.react('❌');
     let banEmbed = new Discord.RichEmbed()
     .setDescription("~Ban~")
     .setColor("RANDOM")
