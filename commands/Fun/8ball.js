@@ -27,7 +27,7 @@ var rand = Math.floor(Math.random() * list.length);
 message.reply(list[rand])
 
 
-}
+
 module.exports.help = {
 	name: "8ball",
 	
