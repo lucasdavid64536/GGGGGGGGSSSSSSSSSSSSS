@@ -7,7 +7,7 @@ exports.run = (client, message) => {
   .setColor('RANDOM')
   message.channel.sendEmbed(embed);
   message.delete();
-  message.reply("**Good Morning!** :smile: :ssss: ")
+  message.reply("**Good Morning!** :smile:")
   message.react("âœ…");
 	
 }
