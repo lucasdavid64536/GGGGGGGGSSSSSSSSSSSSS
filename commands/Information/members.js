@@ -11,6 +11,6 @@ message.react('ðŸ‘');
 	
 }
 module.exports.help = {
-	name: "serverinfo",
-	alias: "i sv"
+	name: "members",
+	alias: "m"
 }
