@@ -8,5 +8,5 @@ message.channel.send("**Total Members In This Server Are : **", message.guild.me
 }
 
 module.exports.help = {
-  name: "i members"
+  name: "members"
 }
