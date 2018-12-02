@@ -11,5 +11,4 @@ message.channel.send(serverembed);
 
 module.exports.help = {
   name: "member count"
-  alias: "count"
 }
