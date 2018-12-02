@@ -10,7 +10,7 @@ if(!cmd||cmd==='1'){
   .setDescription("``THOSE ARE MY COMMANDS READ THEM CAREFULLY AND DON'T FORGET MY PREFIX IS . AND THERE SOME COMMANDS WITHOUT PREFIX LIKE HELP , GN ....`` **You Can Also Get Me By Typing invite** ``OR`` **.invite**``")
   .addField('**THERE IS ALSO ANTI BAD WORDS BLOCKED**')
   .addField('There Are A Report System With .report @user <reason> usage ! So You WAnt It Work You Should Make A Channel Wil reports name To make This Command work**')
-  .addField("**Moderation**","Kick , Ban , Warn , clear , Send , Dm , addrole , removerole  Are A Seriously Commands ! **addrole/removerole usage: .addrole @user Rolename  Remember Don't Mention the role Just Put Hes Name**")
+  .addField("**Moderation**","Kick , Ban , Warn , clear , Send , ,up - Uptime Check , Dm , addrole , removerole  Are A Seriously Commands ! **addrole/removerole usage: .addrole @user Rolename  Remember Don't Mention the role Just Put Hes Name**")
   .addField("``If You Need Help With Any Command Just Type help + the command you want <<Ex : help ban >>``")
   .addField("**Fun Commands**","``avatar , say , botinfo, info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
