@@ -3,9 +3,9 @@ let Discord = require('discord.js');
 exports.run = (client, message) => {
 	
   let embed = new Discord.RichEmbed()
-  .setColor("0x#F605DA")
+  .setColor("RANDOM")
   .setTitle('**Total Members**')
-  .addField("Total Members", message.guild.memberCount)
+  .addField("**Total Members In This ServerAre**", message.guild.memberCount)
 message.channel.send(embed)
 message.react('ðŸ‘');
 	
