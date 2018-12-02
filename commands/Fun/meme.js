@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const meme = require('memejs');
+const meme = require('meme.js');
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   meme(function(data) {
