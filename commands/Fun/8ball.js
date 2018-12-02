@@ -5,6 +5,18 @@ exports.run = (client, message) => {
 //Just The arrays/list of available answers
 var list = [
     'It is certain',
+     'Maybe No?',
+     'No You!',
+    'What Do You Think?',
+    'Srsly?',
+    'Nah',
+    'Hmmmmmmmmmmmm?',
+    'Nup',
+    'Do You Think Im Stupid?',
+    'noooooooooooo it is not',
+    'i cant',
+    'Come Ask Later Plz Im Tired',
+    'Come Ask Later',
     'It is decidedly so',
     'Without a doubt',
     'Yes definitely',
