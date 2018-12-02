@@ -5,7 +5,7 @@ const client = new Discord.Client();
 let nickname = args.join(' ')
   message.guild.members.get('YOUR BOT ID')
   	.setNickname(nickname);
-  await message.channel.send({
+   message.channel.send({
   	embed: new Discord.RichEmbed()
 
   		.setTitle(`Changed Server Nickname to ${nickname}`)
