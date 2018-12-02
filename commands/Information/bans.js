@@ -2,7 +2,7 @@ let Discord = require('discord.js');
 
 exports.run = (client, message) => {
 	
-  message.reply(`Total Bans** ${fetchBans}`)
+  message.reply(`Total Bans** .fetchBans`)
 	
 message.react('😂');
 	
