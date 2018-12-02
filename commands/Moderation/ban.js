@@ -6,12 +6,13 @@ module.exports.run = async (bot, message, args) => {
     if(args[0] == "help"){
       message.reply("Usage: !ban <user> <reason>");
       return;
+        message.react('❓');
     }
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!bUser) return message.channel.send("**I Can't Find This User ! Mention The User To Be Able To Use This Command**");
     let bReason = args.slice(1).join(" ") || "None";
     if(bUser.hasPermission("ADMINISTRATOR")) return message.channel.send("**This User Cant Be Kicked Because He Had A Role Highler Than You** ``OR`` **He Is The Owner Of This Server** ``OR`` **He Have Manage ADMINISTRATOR Permission**");
-
+    message.react('❌');
     let banEmbed = new Discord.RichEmbed()
     .setDescription("~Ban~")
     .setColor("RANDOM")
@@ -23,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
 
 let incidentchannel = message.guild.channels.find(`name`, "log");
     if(!incidentchannel) return message.channel.send("**Can't find log channel. Please Create A New Channel With log Name To Be Able To Use This Command**");
-
+    message.react('❌');
     message.guild.member(bUser).ban(bReason);
     incidentchannel.send(banEmbed);
     message.react('⚒')
