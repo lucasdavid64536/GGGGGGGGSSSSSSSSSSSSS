@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-message.reply("**Total Members In This Server Are : **", message.guild.memberCount);
+message.reply("Total Members In This Server Are", message.guild.memberCount);
 
 }
 
