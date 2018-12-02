@@ -31,5 +31,5 @@ message.reply(list[rand])
 }
 module.exports.help = {
 	name: "8ball",
-	alias: "8b"
+	
 }
