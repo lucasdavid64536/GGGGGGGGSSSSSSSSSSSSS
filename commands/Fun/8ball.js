@@ -40,7 +40,11 @@ var list = [
 var rand = Math.floor(Math.random() * list.length);
 
 //Send's a reply to the user who wrote the message
-message.reply(list[rand])
+var embed = new Discord.RichEmbed()
+.setTitle('**8ball Question**')
+.addField(list[rand])
+
+message.channel.send(embed)
 
 }
 module.exports.help = {
