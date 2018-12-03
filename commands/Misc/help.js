@@ -8,9 +8,9 @@ if(!cmd||cmd==='1'){
   .addField("**Greeting**","``Hi and Hello my friend im xBot a funny bot and moderation bot  Here is My commands You Can Also Join The Supoort Server Have A Good Time From xBot`` ", true)
   .setTitle("**xBot Commands**")
   .setDescription("``THOSE ARE MY COMMANDS READ THEM CAREFULLY AND DON'T FORGET MY PREFIX IS . AND THERE SOME COMMANDS WITHOUT PREFIX LIKE HELP , GN ....`` **You Can Also Get Me By Typing invite** ``OR`` **.invite**``")
-  .addField('**THERE IS ALSO ANTI BAD WORDS BLOCKED**')
-  .addField('There Are A Report System With .report @user <reason> usage ! So You WAnt It Work You Should Make A Channel Wil reports name To make This Command work**')
-  .addField("**Moderation**","Kick , Ban , Warn , clear , Send , ,up - Uptime Check , Dm , addrole , removerole  Are A Seriously Commands ! **addrole/removerole usage: .addrole @user Rolename  Remember Don't Mention the role Just Put Hes Name**")
+  .addField('**THERE IS ALSO ANTI BAD WORDS BLOCKED**', " ")
+  .addField('**There Are A Report System With .report @user <reason> usage ! So You WAnt It Work You Should Make A Channel Wil reports name To make This Command work**', "  ")
+  .addField("**Moderation**","***Kick , Ban , Warn , clear , Send , ,up - Uptime Check , Dm , addrole , removerole  Are A Seriously Commands !*** **addrole/removerole usage: .addrole @user Rolename  Remember Don't Mention the role Just Put Hes Name**")
   .addField("``If You Need Help With Any Command Just Type help + the command you want <<Ex : help ban >>``")
   .addField("**Fun Commands**","``avatar , say , botinfo, info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
@@ -19,7 +19,7 @@ if(!cmd||cmd==='1'){
   .setColor("0x#58FAF4")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === '2'){
   message.reply('')
@@ -30,7 +30,7 @@ if(cmd === '2'){
   .addField("**.help 3**","**Interesting !?**")
   .setColor("RANDOM")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === '3'){
   message.reply('')
@@ -40,7 +40,7 @@ if(cmd === '3'){
   .addField('**other Help**','``help ping/.help ping \.help cook/help cook \.help heat/help heat \.help slap/help slap \.help clap/help clap``')
   .setColor("RANDOM")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === ('ban'||'BAN')){
   var embed = new Discord.RichEmbed()
@@ -50,7 +50,7 @@ if(cmd === ('ban'||'BAN')){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === 'kick'){
   var embed = new Discord.RichEmbed()
@@ -60,7 +60,7 @@ if(cmd === 'kick'){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === 'slap'){
   var embed = new Discord.RichEmbed()
@@ -70,7 +70,7 @@ if(cmd === 'slap'){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === 'clap'){
   var embed = new Discord.RichEmbed()
@@ -80,7 +80,7 @@ if(cmd === 'clap'){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === 'heat'){
   var embed = new Discord.RichEmbed()
@@ -90,7 +90,7 @@ if(cmd === 'heat'){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === 'cook'){
   var embed = new Discord.RichEmbed()
@@ -100,7 +100,7 @@ if(cmd === 'cook'){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === 'ping'){
   var embed = new Discord.RichEmbed()
@@ -110,7 +110,7 @@ if(cmd === 'ping'){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
+  message.react('👍');
 }
 if(cmd === 'addrole'){
   var embed = new Discord.RichEmbed()
@@ -120,16 +120,20 @@ if(cmd === 'addrole'){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  message.react('ðŸ‘');
-}	
+  message.react('👍');
+}
+if(cmd === 'removerole'){
+  var embed = new Discord.RichEmbed()
+  .setTitle("**The Bot Help With RemoveRole Command**")
+  .setDescription("``Hi You Need Help With RemoveRole Command ?``")
+  .addField("**ping**","**Help With removeRole Command : .removerole @user Administrator** ", true)
+  .setColor('RANDOM')
+  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
+  message.channel.sendEmbed(embed);
+  message.react('👍);
 }
 module.exports.help = {
 	name: "help",
-	alias: ["h",
-		"Help",
-		"HeLP",
-		"HElp",
-		"heLP",
-		"HELP"
-	       ]
+	alias: "h",
+		
 }
