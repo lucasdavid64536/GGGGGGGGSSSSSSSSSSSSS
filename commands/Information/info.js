@@ -4,7 +4,6 @@ exports.run = (client, message) => {
 let cmd = message.content.split(' ').slice(1, 2).join(' ');
 	
 	
-if(!cmd){
   let memberToFind = message.mentions.members.first();
 
   if (!memberToFind) {
@@ -21,8 +20,6 @@ if(!cmd){
   message.react("✅");
 }	
 
-	
-}
 module.exports.help = {
 	name: "whois",
 	alias: "i"
