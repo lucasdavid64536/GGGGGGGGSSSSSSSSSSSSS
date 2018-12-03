@@ -14,5 +14,5 @@ message.react('✅');
 
 module.exports.help = {
 	name: "i",
-	alias: "I
+	alias: "I"
 }
