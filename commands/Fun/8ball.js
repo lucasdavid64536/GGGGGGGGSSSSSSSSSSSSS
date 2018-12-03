@@ -42,7 +42,7 @@ var rand = Math.floor(Math.random() * list.length);
 //Send's a reply to the user who wrote the message
 var embed = new Discord.RichEmbed()
 .setTitle('**8ball Question**')
-.addField("Bot Replies", list[rand])
+.addField("**Bot Replies :**", list[rand])
 .setColor("RANDOM")
 
 message.channel.send(embed)
