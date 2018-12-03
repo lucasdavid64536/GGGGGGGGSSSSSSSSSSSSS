@@ -8,5 +8,5 @@ message.reply(`***slaps ${message.mentions.members.first()}***`)
 
 module.exports.help = {
 	name: "slap",
-	alias: "SLAP"
+	alias: "s"
 }
