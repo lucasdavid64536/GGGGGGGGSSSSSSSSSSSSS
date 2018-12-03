@@ -48,11 +48,6 @@ client.on('message', msg => {
         client.user.setActivity(`Playing With Other Bots`, { type: "PLAYING" });
         setTimeout(game3, 10000)
     }
-    
-    function game3() {
-       client.user.setActivity(`Responding For ${client.commands.size} commands`, { type: "PLAYING" });
-        setTimeout(game1, 10000);//these times are in ms, so 30,000 = 30 seconds
-    }      //seconds/1000 = ms
-
+ 
 });
 client.login(process.env.token);
