@@ -13,7 +13,7 @@ exports.run = (client, message) => {
 .setThumbnail(message.guild.iconURL)
 message.channel.send(embed)
 message.react('✅');
-}
+
 }
 module.exports.help = {
 	name: "i sv",
