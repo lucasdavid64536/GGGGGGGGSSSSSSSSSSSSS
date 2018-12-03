@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**Bot Name**", ```bot.user.username```)
     .addField("**My Owner**", ```Ban#9153```)
     .addField("**Discord.js**", ```v11.4.2```)
-    .addField("**Created On**", ```bot.user.createdAt```);
+    .addField("**Created On**", ```bot.user.createdAt```)
     .addField("**Servers Bot Is In Them**", ```${client.guilds.size}```)
     .addField("**Watching Member**", ```${client.users.size}```)
     .addField("**Playing With Bots**", ```${client.bots.size}```)
