@@ -43,6 +43,7 @@ var rand = Math.floor(Math.random() * list.length);
 var embed = new Discord.RichEmbed()
 .setTitle('**8ball Question**')
 .addField("Bot Replies", list[rand])
+.setColor("RANDOM")
 
 message.channel.send(embed)
 
