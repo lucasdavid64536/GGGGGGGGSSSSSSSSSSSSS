@@ -129,7 +129,7 @@ if(cmd === 'removerole'){
   .setColor('RANDOM')
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
   message.channel.sendEmbed(embed);
-  message.react('👍);
+  message.react('👍');
 }
 module.exports.help = {
 	name: "help",
