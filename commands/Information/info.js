@@ -37,5 +37,5 @@ message.react('ðŸ‘');
 }
 module.exports.help = {
 	name: "info",
-	alias: "i"
+	alias: "whois"
 }
