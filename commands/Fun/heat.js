@@ -8,8 +8,6 @@ exports.run = (client, message) => {
     then(m => m.edit(`Now ${message.author} Is Hot :hotsprings: `) );
 }
 
-	
-}
 module.exports.help = {
 	name: "heat",
 	alias: "HEAT",
