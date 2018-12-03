@@ -13,8 +13,8 @@ if(!cmd){
 
   var embed = new Discord.RichEmbed()
   .setAuthor(memberToFind.user.tag, memberToFind.user.avatarURL)
-  .addField(':calendar_spiral: Account Created :calendar_spiral: ', memberToFind.user.createdAt, true)
-  .addField(':calendar_spiral: Joined This Server :calendar_spiral: ', message.guild.members.get(memberToFind.id).joinedAt, true)
+  .addField('Account Created', memberToFind.user.createdAt, true)
+  .addField('Joined This Server', message.guild.members.get(memberToFind.id).joinedAt, true)
   .addField('User ID', memberToFind.id, true)
   .setColor('RANDOM')
   message.channel.send(embed);
