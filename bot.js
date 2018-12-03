@@ -5,6 +5,7 @@ let token = process.env.token;
 let prefix = ".";
 
 client.on('ready', () => {
+console.log('IM READY !');
 client.user.setActivity(`Watching ${client.guilds.size} Servers With ${client.users.size} Members`, { type: "PLAYING" });
         setTimeout(game2, 10000)
     });
@@ -18,8 +19,11 @@ client.user.setActivity(`Watching ${client.guilds.size} Servers With ${client.us
         client.user.setActivity(`Playing With Other Bots`, { type: "PLAYING" });
         setTimeout(game3, 10000)
     }
-console.log('IM READY !')
-});
+    
+    function game3() {
+       client.user.setActivity(`Responding For ${client.commands.size} commands`, { type: "PLAYING" });
+        setTimeout(game1, 10000);//these times are in ms, so 30,000 = 30 seconds
+    }      //seconds/1000 = ms
 
 client.on('message', message => {
  if (message.author.bot) return;
@@ -35,10 +39,10 @@ let commandfile = client.commands.get(cmd);
   let alias = client.aliases.get(cmd);
 
   if(commandfile){
-	  commandfile.run(client,message,args);
+      commandfile.run(client,message,args);
   }
   if(alias){
-	  alias.run(client,message,args);
+      alias.run(client,message,args);
   }
 //end of handler
 });
@@ -48,7 +52,5 @@ client.on('message', msg => {
       msg.delete();
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
-
- 
 });
 client.login(process.env.token);
