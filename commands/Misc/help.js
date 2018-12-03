@@ -121,7 +121,17 @@ if(cmd === 'addrole'){
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
-
+if(cmd === 'removerole'){
+  var embed = new Discord.RichEmbed()
+  .setTitle("**The Bot Help With RemoveRole Command**")
+  .setDescription("``Hi You Need Help With RemoveRole Command ?``")
+  .addField("**ping**","**Help With removeRole Command : .removerole @user Administrator** ", true)
+  .setColor('RANDOM')
+  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
+  message.channel.sendEmbed(embed);
+  message.react('👍');
+}
+}
 module.exports.help = {
 	name: "help",
 	alias: "h",		
