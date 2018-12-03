@@ -1,14 +1,8 @@
-const botconfig = require("./botconfig.json");
-const token = process.env.token
-const Discord = require("discord.js");
-const fs = require("fs");
+Discord = require("discord.js");
 const client = new Discord.Client();
 require('./util/cmdloader.js')(client);//requires the command loader
-let coins = require("./coins.json");
-let xp = require("./xp.json");
-let purple = botconfig.purple;
-let cooldown = new Set();
-let cdseconds = 5;
+let prefix = process.env.token;
+let token = ".";
 
 client.on('ready', () => {
 client.user.setActivity(`${client.guilds.size} SERVERS TYPE .HELP`, {type: 'WATCHING'});
@@ -44,4 +38,3 @@ client.on('message', msg => {
     }
 });
 client.login(process.env.token);
-
