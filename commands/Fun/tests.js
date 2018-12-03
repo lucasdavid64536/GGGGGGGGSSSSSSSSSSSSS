@@ -3,7 +3,7 @@ let Discord = require('discord.js');
 exports.run = (client, message) => {
 
 
-    const embed = new RichEmbed()
+    var embed = new Discord.RichEmbed()
       // Set the title of the field
       .setTitle('Zapper')
       .setDescription('Chaque jour 10 nouvelles anecdotes à découvrir')
@@ -19,9 +19,6 @@ exports.run = (client, message) => {
       
       
 }
-
-
-})
 
 module.exports.help = {
 	name: "test",
