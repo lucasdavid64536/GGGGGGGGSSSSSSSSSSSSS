@@ -5,8 +5,7 @@ message.delete();
 message.channel.send(`*** Heating ${message.author}...*** :hotsprings: :hotsprings:`)
             setTimeout(function() {
                 //code
-            }, 10000);
-	then(m => m.edit(`Now ${message.author} Is Hot :hotsprings: `) );
+            }, 10000);.	then(m => m.edit(`Now ${message.author} Is Hot :hotsprings: `) );
    }
 
 module.exports.help = {
