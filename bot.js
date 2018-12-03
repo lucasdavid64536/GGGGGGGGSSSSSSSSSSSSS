@@ -1,8 +1,8 @@
 Discord = require("discord.js");
 const client = new Discord.Client();
 require('./util/cmdloader.js')(client);//requires the command loader
-let prefix = process.env.token;
-let token = ".";
+let token = process.env.token;
+let prefix = ".";
 
 client.on('ready', () => {
 client.user.setActivity(`${client.guilds.size} SERVERS TYPE .HELP`, {type: 'WATCHING'});
