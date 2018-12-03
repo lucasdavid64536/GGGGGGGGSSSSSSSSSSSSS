@@ -9,8 +9,6 @@ exports.run = (client, message) => {
 }
 module.exports.help = {
 	name: "ping",
-	alias: [
-	"p",
-	"PING"
-	]
+	alias: "p",
+
 }
