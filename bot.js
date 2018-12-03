@@ -126,8 +126,7 @@ let commandfile = client.commands.get(cmd);
   if(alias){
 	  alias.run(client,message,args);
   }
-//end of handler
-});
+
 client.on('message', msg => {
   const swearWords = ["WTF", "bitch","fuck","FUCK","wtf","Fuck","fUck","fUCk","wtf","w t f","wt f","motherfucker","MOTHERFUCKERS","MOTHERFUCKER","MOTHERfUCKER","mOTHERfucker"];
   if( swearWords.some(word => msg.content.includes(word)) ) {
