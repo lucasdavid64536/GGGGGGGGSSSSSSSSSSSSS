@@ -1,3 +1,7 @@
+let Discord = require('discord.js');
+
+exports.run = (client, message) => {
+	
 if(cmd === ('sv')){
   let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -11,7 +15,7 @@ if(cmd === ('sv')){
 message.channel.send(embed)
 message.react('✅');
 }
-
+}
 module.exports.help = {
 	name: "i",
 	alias: "I"
