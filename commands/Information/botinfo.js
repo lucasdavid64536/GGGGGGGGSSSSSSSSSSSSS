@@ -10,9 +10,9 @@ module.exports.run = async (bot, message, args) => {
     .addField('**My Owner**',"```Ban#9153```")
     .addField('**Discord.js**',"```v11.4.2```")
     .addField('**Created On**', `**bot.user.createdAt**`)
-    .addField('**Servers Bot Is In Them**', `**${client.guilds.size}**`)
-    .addField('**Watching Member**', `**${client.users.size}**`)
-    .addField('**Playing With Bots**', `**${client.bots.size}**`)
+    .addField('**Servers Bot Is In Them**', `**${bot.guilds.size}**`)
+    .addField('**Watching Member**', `**${bot.users.size}**`)
+    .addField('**Playing With Bots**', `**${bot.bots.size}**`)
     .addField('**Up Time**', `**${hours} hours, ${minutes} minutes and ${seconds} seconds**`)
     
 
