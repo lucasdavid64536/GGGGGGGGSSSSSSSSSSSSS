@@ -13,7 +13,6 @@ if(!cmd||cmd==='1'){
   .addField("**Moderation**","***Kick , Ban , Warn , clear , Send , ,up - Uptime Check , Dm , addrole , removerole  Are A Seriously Commands !*** **addrole/removerole usage: .addrole @user Rolename  Remember Don't Mention the role Just Put Hes Name**")
   .addField("``If You Need Help With Any Command Just Type help + the command you want <<Ex : help ban >>``")
   .addField("**Fun Commands**","``avatar , say , botinfo, info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
-  .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/93WKw7M`` ", true)
   .addField("**.help 2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
