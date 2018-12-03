@@ -1,9 +1,12 @@
 let Discord = require('discord.js');
 
 exports.run = (client, message) => {
-
-message.reply(`***hugs ${message.mentions.members.first()}***`)
-
+	
+let user = message.mentions.users.first() || message.author;
+var embed = new Discord.RichEmbed()
+.setTitle("**Cute**")
+.addField(`***${message.member.displayName} hugs ${message.mentions.members.first()}***`)
+ message.channel.send(embed)
 }
 
 module.exports.help = {
