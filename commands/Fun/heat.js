@@ -6,7 +6,7 @@ message.channel.send(`*** Heating ${message.author}...*** :hotsprings: :hotsprin
             setTimeout(function() {
                 //code
             }, 10000);
-        });
+   }
 
 module.exports.help = {
 	name: "heat",
