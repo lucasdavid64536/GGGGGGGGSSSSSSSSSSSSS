@@ -2,7 +2,7 @@ let Discord = require('discord.js');
 
 exports.run = (client, message) => {
 
-message.reply(`${message.member.displayName} is hugging ${message.mentions.members.first()}`)
+message.reply(`***hugs ${message.mentions.members.first()}***`)
 
 }
 
