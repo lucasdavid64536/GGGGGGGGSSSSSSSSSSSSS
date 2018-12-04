@@ -28,7 +28,33 @@ client.user.setActivity(`${client.guilds.size} Servers With ${client.users.size}
     }      //seconds/1000 = ms
 
 client.on('message', message => {
-         if(message.author.bot) return;
+ if (message.author.bot) return;
+ if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  cmd = command.slice(prefix.length);
+  let args = message.content.split(" ").slice(1);
+
+  
+//command handler
+let commandfile = client.commands.get(cmd);
+  let alias = client.aliases.get(cmd);
+
+  if(commandfile){
+      commandfile.run(client,message,args);
+  }
+  if(alias){
+      alias.run(client,message,args);
+  }
+//end of handler
+});
+client.on('message', msg => {
+  const swearWords = ["WTF", "bitch","fuck","FUCK","wtf","Fuck","fUck","fUCk","wtf","w t f","wt f","motherfucker","MOTHERFUCKERS","MOTHERFUCKER","MOTHERfUCKER","mOTHERfucker"];
+  if( swearWords.some(word => msg.content.includes(word)) ) {
+      msg.delete();
+      msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
+    }
+if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
@@ -65,34 +91,7 @@ client.on('message', message => {
   setTimeout(() => {
     cooldown.delete(message.author.id)
   }, cdseconds * 1000)
-        
- if (message.author.bot) return;
- if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  cmd = command.slice(prefix.length);
-  let args = message.content.split(" ").slice(1);
-
-  
-//command handler
-let commandfile = client.commands.get(cmd);
-  let alias = client.aliases.get(cmd);
-
-  if(commandfile){
-      commandfile.run(client,message,args);
-  }
-  if(alias){
-      alias.run(client,message,args);
-  }
-//end of handler
-});
-client.on('message', msg => {
-  const swearWords = ["WTF", "bitch","fuck","FUCK","wtf","Fuck","fUck","fUCk","wtf","w t f","wt f","motherfucker","MOTHERFUCKERS","MOTHERFUCKER","MOTHERfUCKER","mOTHERfucker"];
-  if( swearWords.some(word => msg.content.includes(word)) ) {
-      msg.delete();
-      msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
-    }
-
+}
 
 });
   client.login(process.env.token);
