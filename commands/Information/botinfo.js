@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**• Bot Name**", bot.user.username)
     .addField("**• Bot's ID**", "**517276995269296129**")
     .addField("**• Bot's Owner**", "***Ban#9153***")
-    .addField(":ping_pong: **• Ping** :ping_pong:", `**${Math.round(client.ping)}Ms**`)
+    .addField(":ping_pong: **• Ping** :ping_pong:", `**${Math.round(bot.ping)}Ms**`)
     .addField(":calendar_spiral:**• Created On**:calendar_spiral:", bot.user.createdAt)
     .addField("**• Mem Usage**", "145.35 / 1956.89 MB")
     .addField("**• Node.js:**", "v10.13.0")
