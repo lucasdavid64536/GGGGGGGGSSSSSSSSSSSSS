@@ -7,6 +7,6 @@ exports.run = (client, message) => {
 }
 
 module.exports.help = {
-	name: "id",
-	alias: "ID"
+	name: "sid",
+	alias: "SID"
 }
