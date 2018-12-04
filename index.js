@@ -2,7 +2,6 @@ Discord = require("discord.js");
 const client = new Discord.Client();
 require('./util/cmdloader.js')(client);//requires the command loader
 const fs = require("fs");
-const ms = require("ms");
 let token = process.env.token;
 let prefix = ".";
 
