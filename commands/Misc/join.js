@@ -30,4 +30,4 @@ client.on("guildDelete", async guild => {
   
   guildCreateDelete.send(leaveEmbed);
 
-});
+}
