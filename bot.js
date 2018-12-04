@@ -6,23 +6,23 @@ let prefix = ".";
 
 client.on('ready', () => {
 console.log('IM READY !');
-client.user.setActivity(`Watching ${client.guilds.size} Servers With ${client.users.size} Members`, { type: "PLAYING" });
-        setTimeout(game2, 10000)
+client.user.setActivity(`**Watching ${client.guilds.size} Servers With ${client.users.size} Members**`, { type: "" });
+        setTimeout(game2, 20000)
     });
     
     function game1() {
-        client.user.setActivity(`Type .Help And See Full List Of My Commands`, { type: "PLAYING" });
-        setTimeout(game2, 10000)
+        client.user.setActivity(`**Type .Help And See Full List Of My Commands**`, { type: "" });
+        setTimeout(game2, 20000)
     }
     
     function game2() {
-        client.user.setActivity(`Playing With Other Bots`, { type: "PLAYING" });
-        setTimeout(game3, 10000)
+        client.user.setActivity(`**Playing With Other Bots**`, { type: "PLAYING" });
+        setTimeout(game3, 20000)
     }
     
     function game3() {
-       client.user.setActivity(`Responding For ${client.commands.size} commands`, { type: "PLAYING" });
-        setTimeout(game1, 10000);//these times are in ms, so 30,000 = 30 seconds
+       client.user.setActivity(`**Responding For ${client.commands.size} commands**`, { type: "" });
+        setTimeout(game1, 20000);//these times are in ms, so 30,000 = 30 seconds
     }      //seconds/1000 = ms
 
 client.on('message', message => {
