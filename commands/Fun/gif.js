@@ -18,7 +18,7 @@ exports.run = async (client, message, args1) => {
   
   message.channel.send(embed)
   console.log("Trump gif succesfully send")}
-  }
+  
   module.exports.help = {
 	name: "gif",
 	alias: "g"
