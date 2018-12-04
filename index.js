@@ -52,6 +52,20 @@ client.on('message', msg => {
       msg.delete();
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
+module.exports = (client, guild) => {
+    let guildCreateJoin = client.channels.get('517388949048655892');
+    let joinEmbed = new Discord.RichEmbed()
+    .setTitle("Bot Joined server!")
+    .setThumbnail(guild.iconURL)
+    .addField(`Server Name:`, `${guild.name}`)
+    .addField(`Server ID:`, `${guild.id}`)
+    .addField(`Server Owner:`, `${guild.owner}`)
+    .setColor("#4286f4")
+    .setFooter(`${client.config.botname}`)
+    .setTimestamp();
+    guildCreateJoin.send(joinEmbed);
+}
 
+        
 });
   client.login(process.env.token);
