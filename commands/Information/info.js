@@ -12,7 +12,7 @@ let cmd = message.content.split(' ').slice(1, 2).join(' ');
 
   var embed = new Discord.RichEmbed()
   .setAuthor(memberToFind.user.tag, memberToFind.user.avatarURL)
-  .setThumbnail(user.displayAvatarURL)
+  .setImage(user.displayAvatarURL)
   .addField("Member ID:", memberToFind.id, true)
   .addField("Status", memberToFind.status, true)
   .addField('Account Created', memberToFind.user.createdAt, true)
