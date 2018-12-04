@@ -53,7 +53,7 @@ client.on('message', msg => {
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
 client.on("guildCreate", async guild => {
-  let guildCreateChannel = client.channels.get("<channel id here>");
+  let guildCreateChannel = client.channels.get("517387859695763467");
   
   let general = guild.channels.find('name', 'general');
   guild.channels.get(general.id).createInvite().then(invite => {
