@@ -13,6 +13,7 @@ let cmd = message.content.split(' ').slice(1, 2).join(' ');
    var embed = new Discord.RichEmbed()
    .setTitle("**Member ID:**")
    .setDescription("**This Member ID Is:**", memberToFind.id, true)
+   message.channel.send(embed)
    }
 module.exports.help = {
   name:"id"
