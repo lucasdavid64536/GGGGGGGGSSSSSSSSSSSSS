@@ -15,26 +15,26 @@ exports.run = (client, message, args) => {
   client.unbanReason = reason;
   client.unbanAuth = message.author;
   let user = args[0];
-  let modlog = guild.channels.find('name', 'mod-log', 'log');//mod-log channel name. change for you
-  if (!modlog) return message.reply('`mod-log` Kanalını Bulamıyorum.');//don't find mod-log channel.
-  if (!user) return message.reply('**Banı Kaldırılacak Kişinin** **__ID__** **Numarasını Yazmalısın.**').catch(console.error);
+  let modlog = guild.channels.find('name', 'log', 'log');//mod-log channel name. change for you
+  if (!modlog) return message.reply('**I Cant Find Log Channel Please Create A Channel With** ``log`` **Name To Be Able To Use This Command**');//don't find mod-log channel.
+  if (!user) return message.reply('**I Cant Find User ! Please Type Hes** ``__ID__`` **And This Command Will Work**').catch(console.error);
   message.guild.unban(user);
-  if (reason.length < 1) return message.reply('**Ban Kaldırma Sebebini Belirtmedin!**');//don't forget unban reason
-
-  const embed = new Discord.RichEmbed()
+  if (reason.length < 1) return message.reply('**You Did Not Specify The Reason For The Unban **');//don't forget unban reason
+	
+var embed = new Discord.RichEmbed()
     .setColor("RANDOM")
     .setTimestamp()
-    .addField('Eylem:', 'Ban kaldırma')
-    .addField('Kullanıcı:', `${user.username}#${user.discriminator} (${user.id})`)
-    .addField('Yetkili:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Sebep', reason);
+    .addField('Action:', 'Unban')
+    .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
+    .addField('Authorized:', `${message.author.username}#${message.author.discriminator}`)
+    .addField('Reason', reason);
   return guild.channels.get(modlog.id).sendEmbed(embed);
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
+  aliases: ["u"],
   permLevel: 2
 };
 
