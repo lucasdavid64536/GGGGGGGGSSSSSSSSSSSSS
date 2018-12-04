@@ -19,7 +19,7 @@ exports.run = (bot, message, args) => {
   return guild.channels.get(log.id).sendEmbed(embed);
 };
 
-};
+}
 module.exports.help = {
 	name: "unban",
 	alias: "un"
