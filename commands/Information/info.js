@@ -12,9 +12,12 @@ let cmd = message.content.split(' ').slice(1, 2).join(' ');
 
   var embed = new Discord.RichEmbed()
   .setAuthor(memberToFind.user.tag, memberToFind.user.avatarURL)
+  .addField("Member ID:", memberToFind.id, true)
+  .addField("Status", memberToFind.status, true)
   .addField('Account Created', memberToFind.user.createdAt, true)
   .addField('Joined This Server', message.guild.members.get(memberToFind.id).joinedAt, true)
-  .addField('User ID', memberToFind.id, true)
+  .addField("Roles", memberToFind.roles, true)
+  .addField("Joined", memberToFind.user.guilds.size, true)
   .setColor('RANDOM')
   message.channel.send(embed);
   message.react("✅");
