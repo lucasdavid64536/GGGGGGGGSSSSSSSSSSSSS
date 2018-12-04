@@ -78,8 +78,8 @@ client.on("guildDelete", async guild => {
     .addField('Guild Info', `Name: **${guild.name}** \nID: **${guild.id}**`)
   
   guildCreateDelete.send(leaveEmbed);
-});
 
+}
 
 });
   client.login(process.env.token);
