@@ -79,7 +79,7 @@ client.on("guildDelete", async guild => {
   
   guildCreateDelete.send(leaveEmbed);
 
-}
+});
 
 });
   client.login(process.env.token);
