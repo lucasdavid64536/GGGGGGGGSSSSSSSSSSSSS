@@ -3,7 +3,7 @@ const Discord = require("discord.js")
 module.exports = (client, guild) => {
     let guildCreateJoin = client.channels.get('517388949048655892');
     let joinEmbed = new Discord.RichEmbed()
-    .setTitle("Bot left server!")
+    .setTitle("Bot Joined server!")
     .setThumbnail(guild.iconURL)
     .addField(`Server Name:`, `${guild.name}`)
     .addField(`Server ID:`, `${guild.id}`)
