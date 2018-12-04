@@ -11,9 +11,9 @@ module.exports.run = async (bot, message, args) => {
     .addField('**Discord.js**',"```v11.4.2```")
     .addField('Node.js',"```v10.13.0```")
     .addField('**xBot#3901 was Created on Dec-11-2017**', `**bot.user.createdAt**`)
-    .addField('**Servers Bot Is In Them**', `${bot.guilds.size}`)
-    .addField('**Watching Member**', `${bot.users.size}`)
-    .addField('**Playing With Bots**', `${bot.bots.size}`)
+    .addField('**Servers Bot Is In Them**',)
+    .addField('**Watching Member**',)
+    .addField('**Playing With Bots**',)
     .addField('**Up Time**', `${hours} hours, ${minutes} minutes and ${seconds} seconds`)
     
 
