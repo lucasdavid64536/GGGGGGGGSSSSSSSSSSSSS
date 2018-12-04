@@ -11,9 +11,9 @@ module.exports.run = async (bot, message, args) => {
     .addField("**• Mem Usage**", "145.35 / 1956.89 MB")
     .addField("**• Node.js:**", "v10.13.0")
     .addField("**• Discord.js:**","v11.4.2")
-    .addField("**• Servers**", `${client.guilds.size}`)
-    .addField("**• Members**", `${client.users.size}`)
-    .addField("**• Commands**", `${client.commands.size}`)
+    .addField("**• Servers**", `${bot.guilds.size}`)
+    .addField("**• Members**", `${bot.users.size}`)
+    .addField("**• Commands**", `${bot.commands.size}`)
 
     message.channel.send(botembed);
 }
