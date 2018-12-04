@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**• Bot Name**", bot.user.username)
     .addField("**• Created On**", bot.user.createdAt)
     .addField("**• Mem Usage**", "145.35 / 1956.89 MB")
-    .addField("**• Uptime**", `${hours} hours, ${minutes} minutes and ${seconds} seconds`)
+    .addField("**• Uptime**", `${hours}h, ${minutes}m and ${seconds}s`)
     .addField("**• Node.js:**", "v10.13.0")
     .addField("**• Discord.js:**","v11.4.2")
     .addField("**• Servers**", `${client.guilds.size}`)
