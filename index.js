@@ -53,7 +53,6 @@ client.on('message', msg => {
       msg.delete();
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
-        bot.on("message", async message => {
 
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
@@ -65,4 +64,4 @@ client.on('message', msg => {
     };
   }
 });
-client.login(process.env.token);
+  client.login(process.env.token);
