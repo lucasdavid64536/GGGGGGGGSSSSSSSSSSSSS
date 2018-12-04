@@ -91,7 +91,7 @@ if(message.author.bot) return;
   setTimeout(() => {
     cooldown.delete(message.author.id)
   }, cdseconds * 1000)
-}
+
 
 });
   client.login(process.env.token);
