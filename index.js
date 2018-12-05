@@ -24,7 +24,10 @@ client.user.setActivity(`${client.guilds.size} Servers With ${client.users.size}
        client.user.setActivity(`Responding For ${client.commands.size} commands`, { type: "Watching" });
         setTimeout(game1, 20000);//these times are in ms, so 30,000 = 30 seconds
     }      //seconds/1000 = ms
-
+     function game4() {
+       client.user.setActivity(`Buying Mojang Premium Accounts From https://selly.gg/@BanGamer For Only 4€ Do Like Me! `, { type: "Impressed" });
+        setTimeout(game1, 20000);//these times are in ms, so 30,000 = 30 seconds
+    } 
 client.on('message', message => {
  if (message.author.bot) return;
  if (!message.content.startsWith(prefix)) return;
