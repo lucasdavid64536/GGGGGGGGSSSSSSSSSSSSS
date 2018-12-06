@@ -75,6 +75,6 @@ module.exports = (client, guild) => {
     .setTimestamp();
     guildCreateDelete.send(leaveEmbed);
 }
-        
+}      
 });
   client.login(process.env.token);
