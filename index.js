@@ -49,12 +49,6 @@ let commandfile = client.commands.get(cmd);
   }
 //end of handler
 });
-client.on('message', msg => {
-  const swearWords = ["WTF", "bitch","fuck","FUCK","wtf","Fuck","fUck","fUCk","wtf","w t f","wt f","motherfucker","MOTHERFUCKERS","MOTHERFUCKER","MOTHERfUCKER","mOTHERfucker"];
-  if( swearWords.some(word => msg.content.includes(word)) ) {
-      msg.delete();
-      msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
-    }
 module.exports = (client, guild) => {
     let guildCreateJoin = client.channels.get('517388949048655892');
     let joinEmbed = new Discord.RichEmbed()
