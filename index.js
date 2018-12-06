@@ -17,7 +17,7 @@ client.user.setActivity(`${client.guilds.size} Servers With ${client.users.size}
     
     function game2() {
         client.user.setActivity(`Mojang Premium Accounts From https://selly.gg/@BanGamer For Only 4€ Do Like Me!`, { type: "Buying" });
-        setTimeout(game3, 20000)
+        setTimeout(game3, 30000)
     }
     
     function game3() {
