@@ -45,13 +45,16 @@ client.user.setActivity(`${client.guilds.size} Servers With ${client.users.size}
         setTimeout(game1, 20000);//these times are in ms, so 30,000 = 30 seconds
     }      //seconds/1000 = ms
 client.on('message', message => {
- if (message.author.bot) return;
- if (!message.content.startsWith(prefix)) return;
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
 
-  let command = message.content.split(" ")[0];
-  cmd = command.slice(prefix.length);
-  let args = message.content.split(" ").slice(1);
+  let prefix = botconfig.prefix;
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
 
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot,message,args);
   
 //command handler
 let commandfile = client.commands.get(cmd);
