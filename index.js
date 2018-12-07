@@ -56,16 +56,6 @@ client.on('message', message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
   
-//command handler
-let commandfile = client.commands.get(cmd);
-  let alias = client.aliases.get(cmd);
-
-  if(commandfile){
-      commandfile.run(client,message,args);
-  }
-  if(alias){
-      alias.run(client,message,args);
-  }
 //end of handler
 });
      
