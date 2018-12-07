@@ -64,13 +64,6 @@ fsFiles.forEach(f => {
     client.commands.set(fs.help.name, fs);
 	client.aliases.set(fs.help.alias, fs);
 	});
-msFiles.forEach(f => {
-    if(!f.endsWith(".js"))return;
-		let onr = require(`../commands/Ms/${f}`);
-    client.msCommands.set(ms.help.name, ms);
-    client.commands.set(ms.help.name, ms);
-	client.aliases.set(ms.help.alias, ms);
-	});
 console.log(`loaded ${client.commands.size} commands`);
 console.log(`loaded ${client.aliases.size} aliases`);
 }
