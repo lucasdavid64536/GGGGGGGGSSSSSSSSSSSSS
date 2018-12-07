@@ -10,14 +10,18 @@ module.exports = async (client) => {
     client.moderationCommands = new Discord.Collection();
     client.ownerCommands = new Discord.Collection();
     client.funCommands = new Discord.Collection();
+    client.fsCommands = new Discord.Collection();
+    client.msCommands = new Discord.Collection();
 
 const infoFiles = await readdir("./commands/Information/");
 const miscFiles = await readdir("./commands/Misc/");
 const modFiles = await readdir("./commands/Moderation/");
 const onrFiles = await readdir("./commands/Owner/");
 const funFiles = await readdir("./commands/Fun/");
-
-
+const fsFiles = await readdir("./commands/Fs/");
+const msFiles = await readdir("./commands/Ms/");
+	
+	
 funFiles.forEach(f => {
         if (!f.endsWith(".js")) return;
         let fun = require(`../commands/Fun/${f}`);
@@ -52,6 +56,20 @@ onrFiles.forEach(f => {
     client.ownerCommands.set(onr.help.name, onr);
     client.commands.set(onr.help.name, onr);
 	client.aliases.set(onr.help.alias, onr);
+	});
+fsFiles.forEach(f => {
+    if(!f.endsWith(".js"))return;
+		let onr = require(`../commands/Fs/${f}`);
+    client.fsCommands.set(fs.help.name, fs);
+    client.commands.set(fs.help.name, fs);
+	client.aliases.set(fs.help.alias, fs);
+	});
+msFiles.forEach(f => {
+    if(!f.endsWith(".js"))return;
+		let onr = require(`../commands/Ms/${f}`);
+    client.msCommands.set(ms.help.name, ms);
+    client.commands.set(ms.help.name, ms);
+	client.aliases.set(ms.help.alias, ms);
 	});
 console.log(`loaded ${client.commands.size} commands`);
 console.log(`loaded ${client.aliases.size} aliases`);
