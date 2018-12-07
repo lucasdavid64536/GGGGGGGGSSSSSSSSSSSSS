@@ -11,7 +11,6 @@ module.exports = async (client) => {
     client.ownerCommands = new Discord.Collection();
     client.funCommands = new Discord.Collection();
     client.fsCommands = new Discord.Collection();
-    client.msCommands = new Discord.Collection();
 
 const infoFiles = await readdir("./commands/Information/");
 const miscFiles = await readdir("./commands/Misc/");
@@ -19,7 +18,6 @@ const modFiles = await readdir("./commands/Moderation/");
 const onrFiles = await readdir("./commands/Owner/");
 const funFiles = await readdir("./commands/Fun/");
 const fsFiles = await readdir("./commands/Fs/");
-const msFiles = await readdir("./commands/Ms/");
 	
 	
 funFiles.forEach(f => {
