@@ -25,20 +25,24 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 client.on('ready', () => {
-console.log('IM READY !');
-client.user.setActivity(`${client.guilds.size} Servers With ${client.users.size} Members`, { type: "Watching" });
-        setTimeout(game2, 20000)
+        client.user.setActivity(`on ${client.guilds.size} servers with ${client.users.size} members`, { type: "PLAYING" });
+        setTimeout(game2, 30000)
     });
     
     function game1() {
-        client.user.setActivity(`Type .Help And See Full List Of My Commands`, { type: "Watching" });
-        setTimeout(game2, 20000)
+        client.user.setActivity(`${client.guilds.array().length} Servers || With ${client.users.size} Members`, { type: "Watching" });
+        setTimeout(game2, 30000)
+    }
+    
+    function game2() {
+        client.user.setActivity(`Type .help || Get Full List Of My Commands`, { type: "PLAYING" });
+        setTimeout(game3, 30000)
     }
     
     function game3() {
-       client.user.setActivity(`Responding For ${client.commands.size} commands`, { type: "Watching" });
-        setTimeout(game1, 20000);//these times are in ms, so 30,000 = 30 seconds
-    }      //seconds/1000 = ms
+       client.user.setActivity(`With ${client.commands.size} Commands`, { type: "PLAYING" });
+        setTimeout(game1, 30000);//these times are in ms, so 30,000 = 30 seconds
+    }   
 client.on('message', message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
