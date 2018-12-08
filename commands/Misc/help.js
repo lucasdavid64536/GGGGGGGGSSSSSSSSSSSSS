@@ -15,7 +15,7 @@ if(!cmd||cmd==='1'){
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/93WKw7M`` ", true)
   .addField("**.help 2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -27,7 +27,7 @@ if(cmd === '2'){
   .addField("**You Can Also Use Some Commands without Typing All of The Command**","``Example>>`` **.p === ping command \ whois/info/i === To See A The User Info \ count === to see how many servers I'm in them ! \ serverinfo/.i sv === to See The Server Info** ")
   .addField("**.help 3**","**Interesting !?**")
   .setColor("RANDOM")
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -38,7 +38,7 @@ if(cmd === '3'){
   .addField("**Moderation**","``Moderation : .help ban/help ban \.help kick/help kick === are commands to see how to use Kick/ban commands``")
   .addField('**other Help**','``help ping/.help ping \.help cook/help cook \.help heat/help heat \.help slap/help slap \.help clap/help clap``')
   .setColor("RANDOM")
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -58,7 +58,7 @@ if(cmd === 'kick'){
   .setDescription("``Hi You Need Help With Kick Command ?``")
   .addField("**kick**","**Help With Kick Command : kick + @user*** ``OR`` **k + @user** ", true)
   .setColor('RANDOM')
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -68,7 +68,7 @@ if(cmd === 'slap'){
   .setDescription("``Hi You Need Help With Kick Command ?``")
   .addField("**Slap**","**Help With Slap Command : Slap + @user*** ``OR`` **s + @user** ", true)
   .setColor('RANDOM')
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -78,7 +78,7 @@ if(cmd === 'clap'){
   .setDescription("``Hi You Need Help With clap Command ?``")
   .addField("**clap**","**Help With clap Command : clap + @user*** ``OR`` **c + @user** ", true)
   .setColor('RANDOM')
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -88,7 +88,7 @@ if(cmd === 'heat'){
   .setDescription("``Hi You Need Help With heat Command ?``")
   .addField("**heat**","**Help With Heat Command : heat + @user*** ``OR`` **h + @user** ", true)
   .setColor('RANDOM')
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -98,7 +98,7 @@ if(cmd === 'cook'){
   .setDescription("``Hi You Need Help With cook Command ?``")
   .addField("**cook**","**Help With cook Command : cook + @user*** ``OR`` **C + @user** ", true)
   .setColor('RANDOM')
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -108,7 +108,7 @@ if(cmd === 'ping'){
   .setDescription("``Hi You Need Help With ping Command ?``")
   .addField("**ping**","**Help With ping Command : ping*** ``OR`` **p** ", true)
   .setColor('RANDOM')
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -118,7 +118,7 @@ if(cmd === 'addrole'){
   .setDescription("``Hi You Need Help With addrole Command ?``")
   .addField("**ping**","**Help With addrole Command : .addrole @user Administrator** ", true)
   .setColor('RANDOM')
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
@@ -128,7 +128,7 @@ if(cmd === 'removerole'){
   .setDescription("``Hi You Need Help With RemoveRole Command ?``")
   .addField("**ping**","**Help With removeRole Command : .removerole @user Administrator** ", true)
   .setColor('RANDOM')
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
