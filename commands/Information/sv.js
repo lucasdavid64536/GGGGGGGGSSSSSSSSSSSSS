@@ -11,6 +11,7 @@ exports.run = (client, message) => {
   .addField("Roles Count", message.guild.roles.size)
   .addField("Region", message.guild.region)
 .setThumbnail(message.guild.iconURL)
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
 message.channel.send(embed)
 message.react('✅');
 
