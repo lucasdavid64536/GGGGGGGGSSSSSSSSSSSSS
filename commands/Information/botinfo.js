@@ -18,6 +18,7 @@ module.exports.run = async (bot, message, args) => {
     .addField(":medal:**• Servers**:medal:", `**${bot.guilds.size}**`)
     .addField(":busts_in_silhouette:**• Members**:busts_in_silhouette:", `**${bot.users.size}**`)
     .addField(":video_game:**• Commands**:video_game:", `**${bot.commands.size}**`)
+    .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
 
     message.channel.send(botembed);
 }
