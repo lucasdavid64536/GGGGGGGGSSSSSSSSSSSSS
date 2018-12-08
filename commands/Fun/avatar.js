@@ -8,7 +8,7 @@ exports.run = (client, message) => {
   .setAuthor(`${user.username}`)
   .setImage(user.displayAvatarURL)
   .setColor('RANDOM')
-  .setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
   message.react('ðŸ‘')
 
   message.channel.send(embed)
