@@ -14,6 +14,7 @@ let cmd = message.content.split(' ').slice(1, 2).join(' ');
    .setTitle("**Member ID:**")
    .addField("**This Member ID Is:**", memberToFind.id, true)
    .setColor("RANDOM")
+   .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
    message.channel.send(embed)
    }
 module.exports.help = {
