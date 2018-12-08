@@ -43,7 +43,7 @@ var rand = Math.floor(Math.random() * list.length);
 var embed = new Discord.RichEmbed()
 .setTitle('**8ball Question**')
 .addField("**Bot Replies :**", list[rand])
-.setFooter("Get Mojang & Spotify Premium Accounts ! With only 4 Euro Just Visit https://selly.gg/@BanGamer And Buy 2 Mojang Premium Accounts With Only 4 Euro ! not 42$ Only 4 Euro!")
+.setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/38C2CDU")
 .setColor("RANDOM")
 
 message.channel.send(embed)
