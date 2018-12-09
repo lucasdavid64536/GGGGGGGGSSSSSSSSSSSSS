@@ -1,28 +1,8 @@
 Discord = require("discord.js");
 const client = new Discord.Client();
 require('./util/cmdloader.js')(client);//requires the command loader
-const fs = require("fs");
-let token = process.env.token;
-let prefix = ".";
-
-
-fs.readdir("./commands/", (err, files) => {
-
-  if(err) console.log(err);
-
-  let jsfile = files.filter(f => f.split(".").pop() === "js")
-  if(jsfile.length <= 0){
-    console.log("Couldn't find commands.");
-    return;
-  }
-
-  jsfile.forEach((f, i) =>{
-    let props = require(`./commands/${f}`);
-    console.log(`${f} loaded!`);
-    bot.commands.set(props.help.name, props);
-  });
-
-});
+let prefix = process.env.token;
+let token = ".";
 
 client.on('ready', () => {
         client.user.setActivity(`on ${client.guilds.size} servers with ${client.users.size} members`, { type: "PLAYING" });
@@ -42,20 +22,36 @@ client.on('ready', () => {
     function game3() {
        client.user.setActivity(`With ${client.commands.size} Commands`, { type: "PLAYING" });
         setTimeout(game1, 30000);//these times are in ms, so 30,000 = 30 seconds
-    }   
+    }  
+console.log('IM READY !')
+});
+
 client.on('message', message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
+ if (message.author.bot) return;
+ if (!message.content.startsWith(prefix)) return;
 
-  let prefix = ".";
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
+  let command = message.content.split(" ")[0];
+  cmd = command.slice(prefix.length);
+  let args = message.content.split(" ").slice(1);
 
-  let commandfile = client.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(client,message,args);
   
+//command handler
+let commandfile = client.commands.get(cmd);
+  let alias = client.aliases.get(cmd);
+
+  if(commandfile){
+	  commandfile.run(client,message,args);
+  }
+  if(alias){
+	  alias.run(client,message,args);
+  }
 //end of handler
 });
-     
-  client.login(process.env.token);
+client.on('message', msg => {
+  const swearWords = ["WTF", "bitch","fuck","FUCK","wtf","Fuck","fUck","fUCk","wtf","w t f","wt f","motherfucker","MOTHERFUCKERS","MOTHERFUCKER","MOTHERfUCKER","mOTHERfucker"];
+  if( swearWords.some(word => msg.content.includes(word)) ) {
+      msg.delete();
+      msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
+    }
+});
+client.login(token);
