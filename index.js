@@ -24,6 +24,7 @@ client.on('ready', () => {
         setTimeout(game1, 30000);//these times are in ms, so 30,000 = 30 seconds
     }
 console.log("Im READY ")
+});
 client.on('message', message => {
  if (message.author.bot) return;
  if (!message.content.startsWith(prefix)) return;
