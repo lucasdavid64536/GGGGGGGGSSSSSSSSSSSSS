@@ -5,23 +5,23 @@ let token = process.env.token;
 let prefix = ".";
 
 client.on('ready', () => {
-        client.user.setActivity(`on ${client.guilds.size} servers with ${client.users.size} members`, { type: "PLAYING" });
-        setTimeout(game2, 30000)
+        client.user.setActivity(`On ${client.guilds.size} Servers With ${client.users.size} Members`, { type: "PLAYING" });
+        setTimeout(game2, 10000)
     });
     
     function game1() {
         client.user.setActivity(`${client.guilds.array().length} Servers || With ${client.users.size} Members`, { type: "Watching" });
-        setTimeout(game2, 30000)
+        setTimeout(game2, 10000)
     }
     
     function game2() {
-        client.user.setActivity(`Type .help || Get Full List Of My Commands`, { type: "PLAYING" });
-        setTimeout(game3, 30000)
+        client.user.setActivity(`Type .help || Get Full List Of My Commands`, { type: "LISTENING" });
+        setTimeout(game3, 10000)
     }
     
     function game3() {
-       client.user.setActivity(`With ${client.commands.size} Commands`, { type: "PLAYING" });
-        setTimeout(game1, 30000);//these times are in ms, so 30,000 = 30 seconds
+       client.user.setActivity(`To ${client.commands.size} Commands`, { type: "LSTENING" });
+        setTimeout(game1, 10000);//these times are in ms, so 30,000 = 30 seconds
     } 
 
 client.on('message', message => {
