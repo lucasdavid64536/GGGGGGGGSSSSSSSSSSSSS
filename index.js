@@ -23,8 +23,6 @@ client.on('ready', () => {
        client.user.setActivity(`With ${client.commands.size} Commands`, { type: "PLAYING" });
         setTimeout(game1, 30000);//these times are in ms, so 30,000 = 30 seconds
     } 
-console.log('IM READY !')
-});
 
 client.on('message', message => {
  if (message.author.bot) return;
