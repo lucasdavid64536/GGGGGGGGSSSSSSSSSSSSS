@@ -10,22 +10,20 @@ client.on('ready', () => {
     });
     
     function game1() {
-        client.user.setActivity(`${client.guilds.array().length} Servers || With ${client.users.size} Members`, { type: "Watching" });
+        client.user.setActivity(`on ${client.guilds.array().length} servers with ${client.users.size} members`, { type: "PLAYING" });
         setTimeout(game2, 30000)
     }
     
     function game2() {
-        client.user.setActivity(`Type .help || Get Full List Of My Commands`, { type: "PLAYING" });
+        client.user.setActivity(`my prefix is .`, { type: "PLAYING" });
         setTimeout(game3, 30000)
     }
     
     function game3() {
-       client.user.setActivity(`With ${client.commands.size} Commands`, { type: "PLAYING" });
+       client.user.setActivity(`with ${client.commands.size} commands`, { type: "PLAYING" });
         setTimeout(game1, 30000);//these times are in ms, so 30,000 = 30 seconds
-    }  
-console.log('IM READY !')
-});
-
+    }
+console.log("Im READY ")
 client.on('message', message => {
  if (message.author.bot) return;
  if (!message.content.startsWith(prefix)) return;
@@ -47,11 +45,5 @@ let commandfile = client.commands.get(cmd);
   }
 //end of handler
 });
-client.on('message', msg => {
-  const swearWords = ["WTF", "bitch","fuck","FUCK","wtf","Fuck","fUck","fUCk","wtf","w t f","wt f","motherfucker","MOTHERFUCKERS","MOTHERFUCKER","MOTHERfUCKER","mOTHERfucker"];
-  if( swearWords.some(word => msg.content.includes(word)) ) {
-      msg.delete();
-      msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
-    }
 });
-client.login(token);
+client.login(process.env.token);
