@@ -46,5 +46,5 @@ let commandfile = client.commands.get(cmd);
 //end of handler
 });
 
-});
+
 client.login(process.env.token);
