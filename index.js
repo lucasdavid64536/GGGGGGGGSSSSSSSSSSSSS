@@ -45,6 +45,6 @@ let commandfile = client.commands.get(cmd);
 	  alias.run(client,message,args);
   }
 //end of handler
-});
+
 });
 client.login(process.env.token);
