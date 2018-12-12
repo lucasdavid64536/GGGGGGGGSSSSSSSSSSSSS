@@ -49,6 +49,6 @@ message.channel.send(embed)
 
 }
 module.exports.help = {
-	name: "gen fortnite",
+	name: "genfortnite",
 	alias: "gf"
 }
