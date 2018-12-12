@@ -2,8 +2,8 @@
  
 exports.run = async (client, message, args1) => { 
   var replys = [
-    "https://giphy.com/gifs/1fl3uoVMsx9mFkECau", 
-    "https://giphy.com/gifs/1fl3uoVMsx9mFkECau",
+    "https://media.giphy.com/media/1fl3uoVMsx9mFkECau/giphy.gif", 
+    "https://media.giphy.com/media/1fl3uoVMsx9mFkECau/giphy.gif",
 
           ];
           let gif = (replys[Math.floor(Math.random() * replys.length)])
