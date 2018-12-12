@@ -11,13 +11,16 @@ let memberToFind = message.mentions.members.first();
 	 "https://media.giphy.com/media/SHhUwqxvWRgg6TL2yu/giphy.gif",
 	 
 	 ];
+	
+	
 	let gif = (replys[Math.floor(Math.random() * replys.length)])
           var embed = new Discord.RichEmbed()
 	  .setColor("RANDOM")
 	  .setImage(gif)
 	  .setTitle(`***slaps ${message.mentions.members.first()}***`)
 	  .setFooter("RIP")
-
+	  
+    message.channel.send(embed)
 }
 
 module.exports.help = {
