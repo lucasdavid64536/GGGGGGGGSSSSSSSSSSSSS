@@ -2,6 +2,7 @@
  
 exports.run = async (client, message, args1) => { 
   var replys = [
+    "https://giphy.com/gifs/1fl3uoVMsx9mFkECau", 
     "https://giphy.com/gifs/1fl3uoVMsx9mFkECau",
 
           ];
