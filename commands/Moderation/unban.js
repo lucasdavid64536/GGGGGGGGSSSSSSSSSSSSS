@@ -19,8 +19,10 @@ exports.run = (client, message, args) => {
   if (!modlog) return 
   var embed = new Discord.RichEmbed()
   .setTitle("Error")
-  .setDescription('``log`` I Cant Found A Channel With ``log`` Name ! Make A Channel With ``log`` Name To Be Able To Use This Command ');//don't find mod-log channel.
-  
+  .addField("❌", '**I Cant Found A Channel With** ``log`` **Name ! Make A Channel With** ``log`` **Name To Be Able To Use This Command** ');
+  .setFooter("test")
+  .setColor("")
+	
   message.channel.send(embed)
   
   if (!user) return 
