@@ -31,6 +31,7 @@ exports.run = async (client, message, level) => {
     });
 };
 
+}
 module.exports.help = {
 	name: "smoke",
 	alias: "sm"
