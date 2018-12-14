@@ -29,8 +29,6 @@ exports.run = async (client, message, level) => {
             msg.edit(`Finished smoking`);
         }, 4000);
     });
-};
-
 }
 module.exports.help = {
 	name: "smoke",
