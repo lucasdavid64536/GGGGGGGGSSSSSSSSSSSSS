@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const prefix = "."
+
 exports.run = async (client, message, level) => {
   
     if (!message.member.hasPermission("ADMINISTRATOR" || !message.author.id === botconfig.ownerID)) {
