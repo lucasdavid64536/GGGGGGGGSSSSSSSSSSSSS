@@ -6,13 +6,13 @@ exports.run = async (client, message, level) => {
     message.reply(`***Is Cooking ${message.author} .*** :smiley:`).then(async msg => {
 	    setTimeout(() => {
             msg.edit(`***Is Cooking ${message.author} ..*** :smiley:`);
-        }, 3000);
+        }, 1000);
 	    setTimeout(() => {
             msg.edit(`***Is Cooking ${message.author} ...*** :smiley:`);
-        }, 3000);
+        }, 1500);
 	    setTimeout(() => {
             msg.edit('***Is Cooking ${message.author} ....*** :smiley:');
-        }, 3000);
+        }, 2000);
 	    setTimeout(() => {
             msg.edit(`***Is Cooking ${message.author} .....*** :smiley:`);
         }, 3000);
