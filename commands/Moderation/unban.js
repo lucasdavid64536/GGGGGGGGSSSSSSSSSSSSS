@@ -20,8 +20,6 @@ exports.run = (client, message, args) => {
   var embed = new Discord.RichEmbed()
   .setTitle("Error")
   .addField("❌", '**I Cant Found A Channel With** ``log`` **Name ! Make A Channel With** ``log`` **Name To Be Able To Use This Command** ');
-  .setFooter("test")
-  .setColor("")
 	
   message.channel.send(embed)
   
