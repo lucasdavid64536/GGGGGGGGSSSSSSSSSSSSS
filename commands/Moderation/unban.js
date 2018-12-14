@@ -16,12 +16,27 @@ exports.run = (client, message, args) => {
   client.unbanAuth = message.author;
   let user = args[0];
   let modlog = guild.channels.find('name', 'log', 'log');//mod-log channel name. change for you
-  if (!modlog) return message.reply('``log`` I Cant Found A Channel With ``log`` Name ! Make A Channel With ``log`` Name To Be Able To Use This Command ');//don't find mod-log channel.
-  if (!user) return message.reply('❌ **You Must Type The **__ID__** **Of The Person You Want To Unban**').catch(console.error);
+  if (!modlog) return 
+  var embed = new Discord.RichEmbed()
+  .setTitle("Error")
+  .setDescription('``log`` I Cant Found A Channel With ``log`` Name ! Make A Channel With ``log`` Name To Be Able To Use This Command ');//don't find mod-log channel.
+  
+  message.channel.send(embed)
+  
+  if (!user) return 
+   var embed = new Discord.RichEmbed()
+   .setTitle("Error")
+  .setDescription('❌ **You Must Type The **__ID__** **Of The Person You Want To Unban**').catch(console.error);
+  message.channel.send(embed)
   message.guild.unban(user);
-  if (reason.length < 1) return message.reply('**You Did Not Spetify The Reason For The Unban**');//don't forget unban reason
+  if (reason.length < 1) return 
+  
+  var embed = new Discord.RichEmbed()
+  .setTitle("Error")
+  .setDescription('**You Did Not Spetify The Reason For The Unban**');//don't forget unban reason
+  message.channel.send(embed)
 
-  const embed = new Discord.RichEmbed()
+  var embed = new Discord.RichEmbed()
     .setColor("RANDOM")
     .setTimestamp()
     .addField('💢 Action 💢', 'Unban')
