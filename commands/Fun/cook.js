@@ -1,10 +1,28 @@
-let Discord = require('discord.js');
+const Discord = require('discord.js');
+const prefix = "."
+exports.run = async (client, message, level) => {
+    if (!message.content.startsWith(prefix)) return;
 
-exports.run = (client, message) => {
+    message.reply(`***Is Cooking ${message.author} .*** :smiley:`).then(async msg => {
+	    setTimeout(() => {
+            msg.edit('***Is Cooking ${message.author} ..*** :smiley:');
+        }, 500);
+	    setTimeout(() => {
+            msg.edit('***Is Cooking ${message.author} ...*** :smiley:');
+        }, 500);
+	    setTimeout(() => {
+            msg.edit('***Is Cooking ${message.author} ....*** :smiley:');
+        }, 500);
+	    setTimeout(() => {
+            msg.edit('***Is Cooking ${message.author} .....*** :smiley:');
+        }, 500);
+	    setTimeout(() => {
+            msg.edit(`:shallow_pan_of_food: ***... ?*** :frowning: :droplet:`);
+        }, 4000);
+    });
+};
 	
   message.delete();
-  message.reply(`***Is Cooking ${message.author}*** :smiley:`).then(m => m.edit(`:shallow_pan_of_food: ***... ?*** :frowning: :droplet:`) );
-  message.react('ðŸ‘');
 	
 }
 module.exports.help = {
