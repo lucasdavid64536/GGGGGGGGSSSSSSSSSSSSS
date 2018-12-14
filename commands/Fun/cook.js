@@ -5,7 +5,7 @@ exports.run = async (client, message, level) => {
 	let memberToFind = message.mentions.members.first();
 
   if (!memberToFind) {
-    return message.channel.send('**You Must Mention A User First To Use This Command** ***Expample :*** ``.clap @User``');
+    return message.channel.send('**You Must Mention A User First To Use This Command** ***Expample :*** ``.slap @User``');
   }
 
     if (!message.content.startsWith(prefix)) return;
