@@ -9,8 +9,7 @@ let memberToFind = message.mentions.members.first();
 
           var embed = new Discord.RichEmbed()
 	  .setColor("RANDOM")
-	  .setTitle("RIP")
-	  .setFooter(`***slaps ${message.mentions.members.first()}***`)
+	  .setTitle(`${message.member.displayName} is hugging ${message.mentions.members.first().displayName}`)
 	  
     message.channel.send(embed)
 }
