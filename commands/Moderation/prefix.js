@@ -1,30 +1,27 @@
-const Discord = require("discord.js");
-const fs = require("fs");
-
-module.exports.run = async (bot, message, args) => {
-
-  if(!message.member.hasPermission("MANAGE_SERVER")) return message.reply("No no no.");
-  if(!args[0] || args[0 == "help"]) return message.reply("Usage: !prefix <desired prefix here>");
-
-  let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
-
-  prefixes[message.guild.id] = {
-    prefixes: args[0]
-  };
-
-  fs.writeFile("./prefixes.json", JSON.stringify(prefixes), (err) => {
-    if (err) console.log(err)
-  });
-
-  let sEmbed = new Discord.RichEmbed()
-  .setColor("#FF9900")
-  .setTitle("Prefix Set!")
-  .setDescription(`Set to ${args[0]}`);
-
-  message.channel.send(sEmbed);
-
+const Discord = require('discord.js');
+const prefix = "."
+exports.run = async (client, message, level) => {
+  
+    if (!message.member.hasPermission("ADMINISTRATOR" || !message.author.id === botconfig.ownerID)) {
+      let setprefix_error = new Discord.RichEmbed()
+      .setColor("#4999f0")
+      .setTitle(`Only users with **Administrator** permissions can use this!`)
+      message.channel.send(setprefix_error);
+      return;
+    };
+  }
+  if (cmd === `${prefix}stars` || cmd === `${prefix}stats` || cmd === `${prefix}level`) {
+    let mystars = new Discord.RichEmbed()
+    .setColor("#4999f0")
+    .setTitle(`${message.author.user.username}'s Stats`)
+    .addField(`Level`, `{body.level}`)
+    .addField(`Name`, `${message.author.user.username}`)
+    .addField(`Stars Taken`, `{body.stars}`)
+    .addField(`Stars Given`, `{body.level}`)
+    message.channel.send(mystars);
+  }
 }
-
 module.exports.help = {
-  name: "prefix"
-}
+	name: "pre",
+	alias: "P",
+  }
