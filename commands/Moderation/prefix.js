@@ -20,7 +20,7 @@ exports.run = async (client, message, level) => {
     .addField(`Stars Given`, `{body.level}`)
     message.channel.send(mystars);
   }
-}
+
 module.exports.help = {
 	name: "pre",
 	alias: "P",
