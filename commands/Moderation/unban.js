@@ -16,7 +16,7 @@ exports.run = (bot, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Authorized:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-   guild.channels.get(log.id).sendEmbed(embed);
+    return guild.channels.get(modlog.id).sendEmbed(embed);
 };
 
 module.exports.help = {
