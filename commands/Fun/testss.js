@@ -20,7 +20,6 @@ exports.run = (client, message, args) => {
   var embed = new Discord.RichEmbed()
   .setTitle("Error")
   .setDescription('``log`` I Cant Found A Channel With ``log`` Name ! Make A Channel With ``log`` Name To Be Able To Use This Command ');//don't find mod-log channel.
-  .setColor("0x#ee0003")
   
   message.channel.send(embed)
   
@@ -28,7 +27,6 @@ exports.run = (client, message, args) => {
    var embed = new Discord.RichEmbed()
    .setTitle("Error")
   .setDescription('❌ **You Must Type The **__ID__** **Of The Person You Want To Unban**').catch(console.error);
-  .setColor("0x#ee0003")
   message.channel.send(embed)
   message.guild.unban(user);
   if (reason.length < 1) return 
@@ -36,7 +34,6 @@ exports.run = (client, message, args) => {
   var embed = new Discord.RichEmbed()
   .setTitle("Error")
   .setDescription('**You Did Not Spetify The Reason For The Unban**');//don't forget unban reason
-  .setColor("0x#ee0003")
   message.channel.send(embed)
 
   const embed = new Discord.RichEmbed()
