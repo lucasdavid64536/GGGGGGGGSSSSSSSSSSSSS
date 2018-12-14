@@ -1,4 +1,5 @@
-const prefix = "YOUR PREFIX"
+const Discord = require('discord.js');
+const prefix = "."
 exports.run = async (client, message, level) => {
     if (!message.content.startsWith(prefix)) return;
 
