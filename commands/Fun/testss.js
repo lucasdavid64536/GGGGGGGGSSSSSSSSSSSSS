@@ -36,7 +36,7 @@ exports.run = (client, message, args) => {
   .setDescription('**You Did Not Spetify The Reason For The Unban**');//don't forget unban reason
   message.channel.send(embed)
 
-  const embed = new Discord.RichEmbed()
+  var embed = new Discord.RichEmbed()
     .setColor("RANDOM")
     .setTimestamp()
     .addField('💢 Action 💢', 'Unban')
