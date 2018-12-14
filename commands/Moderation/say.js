@@ -8,7 +8,6 @@ if(!message.member.permissions.has('ADMINISTRATOR'))return message.reply('**You 
 var embed = new Discord.RichEmbed()
 
   .setDescription(say);
-   .setColor("0x#e6dc41")
 
 message.channel.send(embed)
 }
