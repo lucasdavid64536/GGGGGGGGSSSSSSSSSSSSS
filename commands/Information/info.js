@@ -14,10 +14,10 @@ let cmd = message.content.split(' ').slice(1, 2).join(' ');
   .setAuthor(memberToFind.user.tag, memberToFind.user.avatarURL)
   .setImage(memberToFind.AvatarURL)
   .addField("Member ID:", memberToFind.id, true)
-  .addField("Status", memberToFind.statue, true)
+  .addField("Status", message.author.presence.status)
   .addField('Account Created', memberToFind.user.createdAt, true)
   .addField('Joined This Server', message.guild.members.get(memberToFind.id).joinedAt, true)
-  .addField("Roles", roles.map(r=>{r.name}).join('\n'))
+  .addField("Roles", memberToFind.roles, true, roles.map(r=>{r.name}).join('\n'))
   .setColor('RANDOM')
   message.channel.send(embed);
   message.react("✅");
