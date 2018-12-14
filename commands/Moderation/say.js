@@ -5,7 +5,11 @@ let say = message.content.split(' ').slice(1).join(' ');
 if(!message.member.permissions.has('ADMINISTRATOR'))return message.reply('**You Cant Use This Command Because You Dont Have Permissions To use This Command !!!!!**');
   
   message.delete(1000); // deletes the content
-  message.channel.send(say);
+var embed = new Discord.RichEmbed()
+
+  .setDescription(say);
+
+   .setColor("0x#e6dc41")
 	
 }
 module.exports.help = {
