@@ -1,22 +1,35 @@
-exports.run = (bot, message, args) => {
-    const reason = args.slice(1).join(' ');
-    bot.unbanReason = reason;
-    bot.unbanAuth = message.author;
-    const user = args[0];
-    const modlog = bot.channels.find('name', 'log');
-    if (!modlog) return message.reply('**I Cant Find Log Channel Please Create A Channel With** ``log`` **Name To Be Able To Use This Command**');
-    if (reason.length < 1) return message.reply('**You Did Not Specify The Reason For The Unban **');
-    if (!user) return message.reply('**I Cant Find User ! Please Type Hes** ``__ID__`` **And This Command Will Work**').catch(console.error);
-    message.guild.unban(user);
-    message.reply(`Successfuly unbanned <@${user}>`)
-    var embed = new Discord.RichEmbed()
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+exports.run = (client, message, args) => {
+
+  if (!message.guild) {
+  const ozelmesajuyari = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .setTimestamp()
+  .setAuthor(message.author.username, message.author.avatarURL)
+  .addField(':warning: **Uyarı** :warning:', '``unban`` **You Cannot Use This Command Your Missing Administrator Permission** ')
+  return message.author.sendEmbed(ozelmesajuyari); }
+  let guild = message.guild
+  let reason = args.slice(1).join(' ');
+  client.unbanReason = reason;
+  client.unbanAuth = message.author;
+  let user = args[0];
+  let modlog = guild.channels.find('name', 'log', 'log');//mod-log channel name. change for you
+  if (!modlog) return message.reply('``log`` I Cant Found A Channel With ``log`` Name ! Make A Channel With ``log`` Name To Be Able To Use This Command ');//don't find mod-log channel.
+  if (!user) return message.reply('❌ **You Must Type The **__ID__** **Of The Person You Want To Unban**').catch(console.error);
+  message.guild.unban(user);
+  if (reason.length < 1) return message.reply('**You Did Not Spetify The Reason For The Unban**');//don't forget unban reason
+
+  const embed = new Discord.RichEmbed()
     .setColor("RANDOM")
     .setTimestamp()
-    .addField('Action:', 'Unban')
-    .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
+    .addField('💢 Action 💢', 'Unban')
+    .addField('User Unbanned', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Authorized:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Reason', reason);
-    return guild.channels.get(modlog.id).sendEmbed(embed);
+    .addField('Reason Of The Unban', reason);
+  return guild.channels.get(modlog.id).sendEmbed(embed);
+message.react("⚒")
 };
 
 module.exports.help = {
