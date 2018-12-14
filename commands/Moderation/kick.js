@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
   
     let kickEmbed = new Discord.RichEmbed()
-    .setDescription("~Kick~")
+    .setDescription("~~Kick~~")
     .setColor("RANDOM")
     .addField("Kicked User", `${kUser} with ID ${kUser.id}`)
     .addField("Kicked By", `<@${message.author.id}> with ID ${message.author.id}`)
