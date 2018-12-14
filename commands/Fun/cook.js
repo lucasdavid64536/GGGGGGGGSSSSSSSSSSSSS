@@ -21,9 +21,7 @@ exports.run = async (client, message, level) => {
         }, 4000);
     });
 };
-	
-  message.delete();
-	
+		
 }
 module.exports.help = {
 	name: "cook",
