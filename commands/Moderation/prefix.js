@@ -10,16 +10,6 @@ exports.run = async (client, message, level) => {
       return;
     };
   }
-  if (cmd === `${prefix}stars` || cmd === `${prefix}stats` || cmd === `${prefix}level`) {
-    let mystars = new Discord.RichEmbed()
-    .setColor("#4999f0")
-    .setTitle(`${message.author.user.username}'s Stats`)
-    .addField(`Level`, `{body.level}`)
-    .addField(`Name`, `${message.author.user.username}`)
-    .addField(`Stars Taken`, `{body.stars}`)
-    .addField(`Stars Given`, `{body.level}`)
-    message.channel.send(mystars);
-  }
 
 module.exports.help = {
 	name: "pre",
