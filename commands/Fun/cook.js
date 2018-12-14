@@ -20,7 +20,6 @@ exports.run = async (client, message, level) => {
             msg.edit(`:shallow_pan_of_food: ***... ?*** :frowning: :droplet:`);
         }, 4000);
     });
-};
 		
 }
 module.exports.help = {
