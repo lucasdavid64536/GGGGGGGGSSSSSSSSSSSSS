@@ -1,6 +1,13 @@
 const Discord = require('discord.js');
 const prefix = "."
 exports.run = async (client, message, level) => {
+	
+	let memberToFind = message.mentions.members.first();
+
+  if (!memberToFind) {
+    return message.channel.send('**You Must Mention A User First To Use This Command** ***Expample :*** ``.clap @User``');
+  }
+
     if (!message.content.startsWith(prefix)) return;
 
     message.reply(`***Is Cooking ${message.author} .*** :smiley:`).then(async msg => {
@@ -11,7 +18,7 @@ exports.run = async (client, message, level) => {
             msg.edit(`***Is Cooking ${message.author} ...*** :smiley:`);
         }, 1500);
 	    setTimeout(() => {
-            msg.edit('***Is Cooking ${message.author} ....*** :smiley:');
+            msg.edit(`***Is Cooking ${message.author} ....*** :smiley:`);
         }, 2000);
 	    setTimeout(() => {
             msg.edit(`***Is Cooking ${message.author} .....*** :smiley:`);
