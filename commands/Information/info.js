@@ -36,7 +36,7 @@ var embed = new Discord.RichEmbed()
 message.channel.send(embed)
 message.react('ðŸ‘');
 	
-}
+
 }	
 module.exports.help = {
 	name: "whois",
