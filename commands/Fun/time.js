@@ -18,5 +18,4 @@ message.channel.send({ embed })
 
 module.exports.help = {
 	name: "time"
-  alias: "t"
 }
