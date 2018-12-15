@@ -47,7 +47,7 @@ let commandfile = client.commands.get(cmd);
 	
 client.on("channelCreate", async channel => {
 	var logChannel = channel.guild.channels.find(c => c.name === 'logs');
-	if (!logs) return console.log("Can't find logs channel.");
+	if (!logChannel) return console.log("Can't find logs channel.");
 	var cembed = new Discord.RichEmbed()
 		.setTitle("Channel Created")
 		.setColor("RANDOM")
@@ -58,7 +58,7 @@ client.on("channelCreate", async channel => {
 
 client.on("channelDelete", async channel => {
 	var logChannel = channel.guild.channels.find(c => c.name === 'log');
-	if (!logs) return console.log("Can't find logs channel.");
+	if (!logChannel) return console.log("Can't find logs channel.");
 	var embed = new Discord.RichEmbed()
 		.setTitle("Channel Deleted")
 		.setColor("RANDOM")
