@@ -1,8 +1,8 @@
 let Discord = require('discord.js');
 
 exports.run = (client, message) => {
-let cmd = message.content.split(' ').slice(1, 2).join(' ');
-	
+let cmd = message.content.split(' ').slice(1,2).join(' ');	
+
 	
   let memberToFind = message.mentions.members.first();
 
@@ -22,7 +22,22 @@ let cmd = message.content.split(' ').slice(1, 2).join(' ');
   message.channel.send(embed);
   message.react("✅");
 }	
-
+if(!cmd||cmd==='sv'){
+var embed = new Discord.RichEmbed()
+  .setColor("0x#F605DA")
+  .setTitle('**Server Info**')
+  .addField("Id", message.guild.id)
+  .addField("Owner", message.guild.owner)
+  .addField("Owner Id", message.guild.ownerID)
+  .addField("Roles", message.guild.roles.size)
+  .addField("Total Members", message.guild.memberCount)
+  .addField("Region", message.guild.region)
+.setThumbnail(message.guild.iconURL)
+message.channel.send(embed)
+message.react('ðŸ‘');
+	
+}
+}	
 module.exports.help = {
 	name: "whois",
 	alias: "i"
