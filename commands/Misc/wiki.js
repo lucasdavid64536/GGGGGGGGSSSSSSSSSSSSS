@@ -1,6 +1,7 @@
 let Discord = require('discord.js');
 
-exports.run = (client, message) => {
+module.exports.run = async (bot, message, args) => {
+
 
 
 
