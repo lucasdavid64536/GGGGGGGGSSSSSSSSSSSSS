@@ -45,11 +45,11 @@ let commandfile = client.commands.get(cmd);
   }
 //end of handler
 	client.on('guildMemberAdd', member => {
-let logChannel = member.guild.channels.find('name', '⟬💾⟭➞logs');
+let logChannel = member.guild.channels.find('name', 'log');
 
   let logEmbed = new Discord.RichEmbed()
   .setAuthor("BCore | Logs") 
-  .setDescription(member.user.username + " je ``usao`` na server. (" + member.user.id + ")")
+  .setDescription(member.user.username + " joined (" + member.user.id + ")")
   .setColor('RANDOM')
   .setFooter("Igrac se pridruzio", member.user.displayAvatarURL)
   .setTimestamp()
@@ -60,7 +60,7 @@ let logChannel = member.guild.channels.find('name', 'log');
 
   let logEmbed = new Discord.RichEmbed()
   .setAuthor("BCore | Logs") 
-    .setDescription(member.user.username + " je ``izasao`` sa servera. (" + member.user.id + ")")
+    .setDescription(member.user.username + " left  (" + member.user.id + ")")
   .setFooter("Igrac je izasao", member.user.displayAvatarURL)
   .setColor('RANDOM')
   .setTimestamp()
