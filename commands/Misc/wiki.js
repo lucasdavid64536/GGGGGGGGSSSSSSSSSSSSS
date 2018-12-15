@@ -5,11 +5,11 @@ module.exports.run = async (bot, message, args) => {
 
 
 
-    let wiki = args.slice(1).join('+');
-    let link = `https://en.wikipedia.org/wiki/` + wiki;
+    let google = args.slice(1).join('+');
+    let link = `https://www.youtube.com/results?search_query=` + google;
 	message.channel.send(link);
 }
     
 module.exports.help = {
-	name: "wiki"
+	name: "google"
 }
