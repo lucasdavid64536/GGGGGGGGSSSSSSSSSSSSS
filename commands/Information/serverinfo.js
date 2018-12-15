@@ -5,15 +5,16 @@ exports.run = (client, message) => {
   let embed = new Discord.RichEmbed()
   .setColor("0x#F605DA")
   .setTitle('**Server Info**')
-  .addField("Id", message.guild.id)
-  .addField("Owner", message.guild.owner)
-  .addField("Owner Id", message.guild.ownerID)
-  .addField("Roles", message.guild.roles.size)
-  .addField("Total Members", message.guild.memberCount)
-  .addField("Region", message.guild.region)
+  .addField("**Id**", message.guild.id)
+  .addField(":prince: **Owner**:prince: ", message.guild.owner)
+  .addField(":prince: **Owner Id**:prince: ", message.guild.ownerID)
+  .addField(":robot: **Bot Count:**:robot: ", `${bots}`)
+  .addField(":man_in_tuxedo: **Human Count:**:man_in_tuxedo: ", `${humans}`)
+  .addField(":scroll:**Roles**:scroll:", message.guild.roles.size)
+  .addField(":busts_in_silhouette: **Total Members**:busts_in_silhouette: ", message.guild.memberCount)
+  .addField(":checkered_flag: **Region**:checkered_flag: ", message.guild.region)
 .setThumbnail(message.guild.iconURL)
 message.channel.send(embed)
-message.react('ðŸ‘');
 	
 }
 module.exports.help = {
