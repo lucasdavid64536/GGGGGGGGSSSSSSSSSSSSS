@@ -137,6 +137,6 @@ module.exports.help = {
 	name: "help",
 	aliases: ["h", 
 		  "HELP", 
-		  "Help"
+		  "Help",
 		 ]		
 }
