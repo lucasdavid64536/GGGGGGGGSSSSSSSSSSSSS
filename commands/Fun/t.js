@@ -22,10 +22,6 @@ const mapping = {
     '*': ':asterisk:'
 };
 
-'abcdefghijklmnopqrstuvwxyz'.split('').forEach(c => {
-    mapping[c] = mapping[c.toUpperCase()] = ` :regional_indicator_${c}:`;
-});
-
 exports.run = (bot, msg, args) => {
     if (args.length < 1) {
         throw '**Bir mesaj belirt**';
