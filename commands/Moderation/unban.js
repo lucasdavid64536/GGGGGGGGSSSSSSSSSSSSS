@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
   client.unbanReason = reason;
   client.unbanAuth = message.author;
   let user = args[0];
-  let modlog = guild.channels.find('name', 'log', 'log');//mod-log channel name. change for you
+  let modlog = guild.channels.find('name', 'log');//mod-log channel name. change for you
   if (!modlog) return 
   var embed = new Discord.RichEmbed()
   .setTitle("Error")
