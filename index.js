@@ -44,7 +44,7 @@ let commandfile = client.commands.get(cmd);
 	  alias.run(client,message,args);
   }
 //end of handler
-	bot.on('guildMemberAdd', member => {
+	client.on('guildMemberAdd', member => {
 let logChannel = member.guild.channels.find('name', '⟬💾⟭➞logs');
 
   let logEmbed = new Discord.RichEmbed()
@@ -55,7 +55,7 @@ let logChannel = member.guild.channels.find('name', '⟬💾⟭➞logs');
   .setTimestamp()
   logChannel.send(logEmbed);
 })
-bot.on('guildMemberRemove', member => {
+client.on('guildMemberRemove', member => {
 let logChannel = member.guild.channels.find('name', 'log');
 
   let logEmbed = new Discord.RichEmbed()
