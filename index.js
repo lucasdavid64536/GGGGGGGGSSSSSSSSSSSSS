@@ -44,28 +44,7 @@ let commandfile = client.commands.get(cmd);
 	  alias.run(client,message,args);
   }
 //end of handler
-	client.on('guildMemberAdd', member => {
-let logChannel = member.guild.channels.find('name', 'log');
-
-  var logEmbed = new Discord.RichEmbed()
-  .setAuthor("BCore | Logs") 
-  .setDescription(member.user.username + " joined (" + member.user.id + ")")
-  .setColor('RANDOM')
-  .setFooter("Igrac se pridruzio", member.user.displayAvatarURL)
-  .setTimestamp()
-  logChannel.send(logEmbed);
-})
-client.on('guildMemberRemove', member => {
-let logChannel = member.guild.channels.find('name', 'log');
-
-  var logEmbed = new Discord.RichEmbed()
-  .setAuthor("BCore | Logs") 
-    .setDescription(member.user.username + " left  (" + member.user.id + ")")
-  .setFooter("Igrac je izasao", member.user.displayAvatarURL)
-  .setColor('RANDOM')
-  .setTimestamp()
- logChannel.send(logEmbed);
-})
+	
 	
 });
 
