@@ -4,7 +4,7 @@ exports.run = (client, message) => {
 
 
 
-    let google = args.slice(1).join('+');
+    let wiki = args.slice(1).join('+');
     let link = `https://en.wikipedia.org/wiki/` + wiki;
 	message.channel.send(link);
 }
