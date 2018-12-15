@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 exports.run = (client, message, args, tools) => {
-  if(!args[0]) return message.channel.send('Correct usage: **ks!reverse (text to reverse)**');
+  if(!args[0]) return message.channel.send('Correct usage: **.reverse (text to reverse)**');
 
   function reverseString(str) {
       return str.split("").reverse().join("");
