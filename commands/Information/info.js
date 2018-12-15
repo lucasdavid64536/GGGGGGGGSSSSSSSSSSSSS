@@ -17,7 +17,7 @@ let cmd = message.content.split(' ').slice(1, 2).join(' ');
   .addField("Status", message.author.presence.status)
   .addField('Account Created', memberToFind.user.createdAt, true)
   .addField('Joined This Server', message.guild.members.get(memberToFind.id).joinedAt, true)
- .addField("Roles", memberToFind.roles.map(r=>'**[** `'+ r.name +'` **]**').join('**,** '))
+ .addField("Roles", memberToFind.roles.map(r=>'**[**`'+ r.name +'`**]**').join('**,** '))
   .setColor('RANDOM')
   message.channel.send(embed);
   message.react("✅");
