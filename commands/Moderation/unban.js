@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
   if (!user) return 
    var embed = new Discord.RichEmbed()
    .setTitle("Error")
-  .setDescription('❌ **You Must Type The **__ID__** **Of The Person You Want To Unban**').catch(console.error);
+  .setDescription('❌ **You Must Type The **__ID__** **Of The Person You Want To Unban**')
   message.channel.send(embed)
   message.guild.unban(user);
   if (reason.length < 1) return 
