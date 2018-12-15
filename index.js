@@ -45,10 +45,7 @@ let commandfile = client.commands.get(cmd);
   }
 //end of handler
 	
-client.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "test");
-    member.addRole(role).catch(console.error);
-});
+
 });
 
 client.login(process.env.token);
