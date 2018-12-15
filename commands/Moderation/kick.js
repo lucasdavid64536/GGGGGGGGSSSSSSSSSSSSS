@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
+	let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(id);
     if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You Can't Use This Command Kiddo! Because Your Missing Administrator Permission");
     if(args[0] == "help"){
       message.reply("Usage: .kick <user> <reason>");
@@ -28,6 +29,13 @@ module.exports.run = async (bot, message, args) => {
     message.guild.member(kUser).kick(kReason);
     kickChannel.send(kickEmbed);
     message.react('⚒');
+	
+	
+	var embed = new Discord.RichEmbed()
+  .setTitle(`**You Got Moderated ---> Action Kick**`)
+  .setDescription(`nothing`)
+  
+  dUser.send(embed)
 }
 
 
