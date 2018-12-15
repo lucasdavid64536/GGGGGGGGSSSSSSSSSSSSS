@@ -8,8 +8,6 @@ exports.run = (client, message) => {
   .addField("**Id**", message.guild.id)
   .addField(":prince: **Owner**:prince: ", message.guild.owner)
   .addField(":prince: **Owner Id**:prince: ", message.guild.ownerID)
-  .addField(":robot: **Bot Count:**:robot: ", message.guild.channels.get `${bots}`)
-  .addField(":man_in_tuxedo: **Human Count:**:man_in_tuxedo: ", message.guild.channels.get `${humans}`)
   .addField(":scroll:**Roles**:scroll:", message.guild.roles.size)
   .addField(":busts_in_silhouette: **Total Members**:busts_in_silhouette: ", message.guild.memberCount)
   .addField(":checkered_flag: **Region**:checkered_flag: ", message.guild.region)
