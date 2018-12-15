@@ -1,7 +1,5 @@
 let Discord = require('discord.js');
 
-const args = message.content.slice(prefix.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
   module.exports.run = async (bot, message, args) => {
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Sorry, but you don't have permission to use this!") 
