@@ -44,7 +44,12 @@ let commandfile = client.commands.get(cmd);
 	  alias.run(client,message,args);
   }
 //end of handler
-	
+	client.on("guildCreate", async guild => {
+  const invite = await guild.channels.first().createInvite({
+    maxAge: 0
+  });
+  console.log(`Joined a new guild named: ${guild.name} with invite: https://discord.gg/${invite.code}`)
+})
 
 });
 
