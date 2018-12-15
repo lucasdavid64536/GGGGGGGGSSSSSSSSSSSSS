@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
 
     let google = args.slice(1).join('+');
-    let link = `https://www.youtube.com/results?search_query=` + google;
+    let link = `https://www.google.com/search?q=` + google;
 	message.channel.send(link);
 }
     
