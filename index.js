@@ -64,7 +64,7 @@ let logChannel = member.guild.channels.find('name', 'log');
   .setFooter("Igrac je izasao", member.user.displayAvatarURL)
   .setColor('RANDOM')
   .setTimestamp()
-  logChannel.send(logEmbed);
+ message.channel.send(logEmbed);
 })
 	
 });
