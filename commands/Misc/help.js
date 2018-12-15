@@ -135,5 +135,5 @@ if(cmd === 'removerole'){
 }
 module.exports.help = {
 	name: "help",
-	alias: "h",		
+	aliases: ["h", "HELP", "Help"]		
 }
