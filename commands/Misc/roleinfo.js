@@ -20,6 +20,7 @@ module.exports.run = async
   .setFooter("");
   message.channel.send(roleinfoEmbed)
 }
+}
 module.exports.help = {
   name:"roleinfo"
 }
