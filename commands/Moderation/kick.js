@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!kUser) return message.channel.send("**I Can't Find This User ! Mention The User To Be Able To Use This Command**");
     let kReason = args.slice(1).join(" ") || "None";
-    if(bUser.hasPermission("ADMINISTRATOR")) return message.channel.send("**This User Cant Be Kicked Because He Had A Role Highler Than You** ``/OR/`` **He Is The Owner Of This Server** ``/OR/`` **He Had Administrator Permission**");
+    if(kUser.hasPermission("ADMINISTRATOR")) return message.channel.send("**This User Cant Be Kicked Because He Had A Role Highler Than You** ``/OR/`` **He Is The Owner Of This Server** ``/OR/`` **He Had Administrator Permission**");
 
   
     let kickEmbed = new Discord.RichEmbed()
