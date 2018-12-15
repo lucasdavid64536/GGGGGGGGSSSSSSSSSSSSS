@@ -47,7 +47,7 @@ let commandfile = client.commands.get(cmd);
 	client.on('guildMemberAdd', member => {
 let logChannel = member.guild.channels.find('name', 'log');
 
-  let logEmbed = new Discord.RichEmbed()
+  var logEmbed = new Discord.RichEmbed()
   .setAuthor("BCore | Logs") 
   .setDescription(member.user.username + " joined (" + member.user.id + ")")
   .setColor('RANDOM')
@@ -58,7 +58,7 @@ let logChannel = member.guild.channels.find('name', 'log');
 client.on('guildMemberRemove', member => {
 let logChannel = member.guild.channels.find('name', 'log');
 
-  let logEmbed = new Discord.RichEmbed()
+  var logEmbed = new Discord.RichEmbed()
   .setAuthor("BCore | Logs") 
     .setDescription(member.user.username + " left  (" + member.user.id + ")")
   .setFooter("Igrac je izasao", member.user.displayAvatarURL)
