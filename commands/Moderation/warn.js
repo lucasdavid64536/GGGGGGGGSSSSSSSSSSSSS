@@ -19,5 +19,4 @@ const args = message.content.slice(prefix.prefix.length).trim().split(/ +/g);
   
   module.exports.help = {
 	name: "warn",
-	alias:"WARN
 }
