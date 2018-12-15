@@ -45,7 +45,27 @@ let commandfile = client.commands.get(cmd);
   }
 //end of handler
 	
-	
+client.on("channelCreate", async channel => {
+	var logs = channel.guild.channels.find(c => c.name === 'logs');
+	if (!logs) return console.log("Can't find logs channel.");
+	const cembed = new Discord.RichEmbed()
+		.setTitle("Channel Created")
+		.setColor("RANDOM")
+		.setDescription(`A **${channel.type} channel**, by the name of **${channel.name}**, was just created!`)
+		.setTimestamp(new Date());
+	logs.send(cembed)
+});
+
+client.on("channelDelete", async channel => {
+	var logs = channel.guild.channels.find(c => c.name === 'log');
+	if (!logs) return console.log("Can't find logs channel.");
+	var embed = new Discord.RichEmbed()
+		.setTitle("Channel Deleted")
+		.setColor("RANDOM")
+		.setDescription(`A **${channel.type} channel**, by the name of **${channel.name}**, was just deleted!`)
+		.setTimestamp(new Date())
+	logs.send(embed)
+});	
 });
 
 
