@@ -45,31 +45,9 @@ let commandfile = client.commands.get(cmd);
   }
 //end of handler
 	
-client.on("channelCreate", async channel => {
-	var logChannel = channel.guild.channels.find(c => c.name === 'logs');
-	if (!logChannel) return console.log("Can't find logs channel.");
-	var cembed = new Discord.RichEmbed()
-		.setTitle("Channel Created")
-		.setColor("RANDOM")
-		.setDescription(`A **${channel.type} channel**, by the name of **${channel.name}**, was just created!`)
-		.setTimestamp(new Date());
-	logChannel.send(cembed)
-});
-
-client.on("channelDelete", async channel => {
-	var logChannel = channel.guild.channels.find(c => c.name === 'log');
-	if (!logChannel) return console.log("Can't find logs channel.");
-	var embed = new Discord.RichEmbed()
-		.setTitle("Channel Deleted")
-		.setColor("RANDOM")
-		.setDescription(`A **${channel.type} channel**, by the name of **${channel.name}**, was just deleted!`)
-		.setTimestamp(new Date())
-	logChannel.send(embed)
-});	
 client.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "test");
     member.addRole(role).catch(console.error);
-}
 });
 
 client.login(process.env.token);
