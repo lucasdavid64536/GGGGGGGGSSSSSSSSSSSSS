@@ -16,7 +16,7 @@ if (!message.member.hasPermission('ADMINISTRATOR') && message.author.id !== '357
 if (!args.join(' ')) return message.channel.send('Please provide a prefix to change server prefix')
 	.then(msg => msg.delete({
 		timeout: 10000
-	}));
+	});
 
 db.set(`prefix_${message.guild.id}`, args.join(' '))
 	.then(i => {
