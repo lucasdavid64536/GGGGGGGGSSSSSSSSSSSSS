@@ -7,7 +7,7 @@ let cmd = message.content.split(' ').slice(1, 2).join(' ');
   let memberToFind = message.mentions.members.first();
 
   if (!memberToFind) {
-    return message.channel.send('**You Must Mention A User First To Use This Command** ***Expample :*** ``.id @User``');
+    return message.channel.send('**You Must Mention A User First To Use This Command** ***Expample :*** ``o!id @User``');
   }
   
    var embed = new Discord.RichEmbed()
