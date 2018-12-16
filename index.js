@@ -2,7 +2,7 @@ Discord = require("discord.js");
 const client = new Discord.Client();
 require('./util/cmdloader.js')(client);//requires the command loader
 let token = process.env.token;
-let prefix = ".";
+let prefix = "o!";
 
 client.on('ready', () => {
         client.user.setActivity(`On ${client.guilds.size} Servers With ${client.users.size} Members`, { type: "PLAYING" });
@@ -15,7 +15,7 @@ client.on('ready', () => {
     }
     
     function game2() {
-        client.user.setActivity(`Type .help || Get Full List Of My Commands`, { type: "LISTENING" });
+        client.user.setActivity(`Type o!help || Get Full List Of My Commands`, { type: "LISTENING" });
         setTimeout(game3, 20000)
     }
     
