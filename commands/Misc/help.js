@@ -13,7 +13,7 @@ if(!cmd||cmd==='1'){
   .addField("``If You Need Help With Any Command Just Type help + the command you want <<Ex : help ban >>``")
   .addField("**Fun Commands**","``avatar , say , botinfo, info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/UpjCWx9`` ", true)
-  .addField("**.help 2**"," **Interesting !?**")
+  .addField("**o!help 2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
   .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/UpjCWx9")
   message.channel.sendEmbed(embed);
@@ -25,7 +25,7 @@ if(cmd === '2'){
   .setTitle('**Bot Commands List 2**')
   .addField("**Moderation**","``Moderation : o!send / o!dm / dm / send === are Commands To Send A Message To The Member You Mentioned To Notify Him For A Dangerous Things Like Hes spam in server etc... [If Ban Got Any Report About A Moderator/owner Of A Server Spamming Hes Members Dms He Will Delete Me From The Current Server So Be Carefull With using This Command ! ]``")
   .addField("**You Can Also Use Some Commands without Typing All of The Command**","``Example>>`` **o!p === ping command \ whois/info/i === To See A The User Info \ count === to see how many servers I'm in them ! \ serverinfo/.i sv === to See The Server Info** ")
-  .addField("**.help 3**","**Interesting !?**")
+  .addField("**o!help 3**","**Interesting !?**")
   .setColor("RANDOM")
   .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/UpjCWx9")
   message.channel.sendEmbed(embed);
