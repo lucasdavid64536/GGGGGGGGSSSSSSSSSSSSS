@@ -128,7 +128,7 @@ if(cmd === 'removerole'){
   .setDescription("``Hi You Need Help With RemoveRole Command ?``")
   .addField("**ping**","**Help With removeRole Command : o!removerole @user Administrator** ", true)
   .setColor('RANDOM')
-  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/UpjCWx9)
+  .setFooter("Need Support ? Join Our Support Community And Get Help There https://discord.gg/UpjCWx9")
   message.channel.sendEmbed(embed);
   message.react('👍');
 }
